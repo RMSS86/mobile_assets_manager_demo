@@ -1,0 +1,424 @@
+1# Make the TRX responsive insert for new products[Done!]
+
+2# Make the TRX responsive insert for assignations [Done!:2]
+[Done!]	#2.2 create cloumn in iCAT_Conditions to get rid of WFH on next location when deallocating...
+[Done!]	#2.3 create dialogs for assignations when complete and when not completed...
+[Done!]	#2.3.2 order from code how to move windows from python code on assignation allowed dialog>>>
+        <<< from kyvy to python code>>>   # app.menu.ids.bottom_nav.switch_tab('assign')
+                                          # app.menu.ids.as_tabs.switch_tab('    Un-Assign    ') 
+[Done!]	#2.3.3 After every move send user to free scan page!(put methon on all completed messsages)
+[Done!]	#2.3.4 Create function all fields reset including erasing widgets and seting self._c_getter to None
+
+[Done!]	#2.4 Create logical conditions for scan for when an item scaned last_move is scratch or phisically lost and deny movements but as refurbished...
+
+		[Critical!]#2.4.2: logical conditions;
+			If scratch, do assignations as condition Good condition(refurbished).
+			[Done!] from assignations_Alerts_manager LN2006: change:
+				variable 
+				viarable to assign in Query self.item_current_condition_ID to '1006'
+
+
+			[ Dispossed: ]  #2.4.3: if Physically lost --- [ Dispossed: ] when item gets phisically lost, then that's a statistical data. 
+
+
+
+	[Done!][Critical!]#2.4.5 Create iCAT_Scratch_Reasons table and a dialog with multiple selection from it when 	selecting scratch in scratcher 	page! :)))) (add physically lost to )
+
+	
+	[Done!]#2.7 Unable the assignation if last move is asignation, must provide a dialog informing user Un needed, so for way around
+
+##################
+1 Purchase
+2 Assignment    	
+3 Deallocation		self.TRX_allower['Deallocation_allower'] == True:				
+4 WareHouse A		self.TRX_allower['WH_A_allower'] == True:
+5 WareHouse B		self.TRX_allower['WH_B_allower'] == True:
+6 Scratch		self.TRX_allower['Scratch_Allower'] == True:
+
+1 ; is never Allowed after registration as first move.
+
+if last move:
+	if on == 1 ->  3 : Not Allowed ###Done
+
+	if on == 2 -> 2 ; 4 ; 5 : Not Allowed 
+
+	if on == 3 ->  3 : Not Allowed  
+	if on == 4 ->  3 ; 4 : Not Allowed 
+	if on == 5 ->  3 ; 5 : Not Allowed 
+	if on == 6 ->>> already resolved on free scan. 
+
+self.show_alert_dialog_Assignation_not_allowed()
+message on 1: 'Assignation Not Allowed!', 'Please make sure the item is not already assigned, Un-Assigned in order to Re-Assign'
+UN-ASSIGN = self.Move_to_allocation_do
+SCRATCH = self.Move_to_Scratcher_do
+
+
+
+self.show_alert_dialog_Deallocation_not_allowed()
+message on 2: Return Not Allowed!', 'Please select Assigment or Scratch, item already returned'
+ASSIGN = self.Move_to_Assignation_do
+
+
+
+self.show_alert_dialog_Scratch_not_allowed()
+message on 3: 'Scratch Not Allowed!', 'Please Scan Scratched declared product in order to set as Refurbished'
+
+
+check self assigantor is False and provide a message hint, if allowed then continue with transactionnnnn
+
+##############
+
+
+	[Done!] #2.8 After any assignation move, blank all fields and take user out to workflow menu....
+
+
+
+
+
+[Done!]4.0-1# create ixSP to verify that the TRX register record was made and then show the label_saved_successfuly Dialog!!![ Critical! ]Other wise delete record for Item just created and show message!
+
+
+
+///////////////////////////////////////////////////////
+<<<<<<<<<<<<<<<<<<<[PENDINGS!]>>>>>>>>>>>>>>>>>>>>>>>/
+/////////////////////////////////////////////////////
+Scratch_Reason_ID :: Scratch_Reason_DSC :: Item Sub CAT :: 
+[On Hold][Critical!]#2.4.6 Fill the most common scratch reasons
+Natural weared out
+User Broke
+Out of warranty
+Broke Under Warranty
+
+[On][Critical!]#2.4.7 Create a dialog and ofer the list of reasons ID based on most common cases by Sub_Cat_ID 
+3# Insert real data in remainding catalogs starting for iCAT_Item_Description[Critical!]
+
+
+#3.0 Check out on Code's the TODOS
+
+
+[Done!][ Critical! ]5# create IP_ADS on employee table! location from agent using IP(create a tab to enter IP and update )
+
+[Done!] 5# on Assignation tab, set primary text for agent name to whole name and secundary text for account name
+secondary_text :: list_assg_item_to_emp
+
+
+[Done!] 8# Add after registering an Item, if you'd like to assign(goes to scanner), do another(resets fields) exit(goes to menu)
+
+
+
+
+
+X# Add real user information on TRX
+
+[?]*create IT TECH on Agents table
+
+9# 21_UP!
+
+[Critical!] 10# Create ixSP for what the Agent is holding currently, not the the history of all the asignations on agent... [Queue]
+
+
+
+
+
+
+1#[Critical!] Fill the functions for the action bottuns! - go to scan, log out etc
+
+
+2#[Criticals!]:
+#Make log in page with Admin only user/access
+#Make Virtual Keyboard
+#add the refurbished column for when from scratch to refurbished just gives refurbish as ooption
+#Show on empolyee responsive just the items currently assigned, and the opt to see the whole history. 
+
+
+3#[ Critical! ]6# learn how to open and display images stored on database to send on email
+
+4#[ OnHold ][ Critical! ]5# Module to get echo location from agent using IP(create a tab to enter IP Address manually)
+#5 Add colomn in iCAT_Location for In_Transit_MOV yes for in Transit by when user is Driver...
+
+	#5.2 Create from Item table In transit [Yes/No] :: pick up  , delivery time  .
+
+
+6#[Critical!]#create method / window just to move items from locations(used also on delivery guy profile)
+7#[v1.1/1.2][ Critical! ]7# make the reports pages with graphics in power BI with PYthon or tableou
+8#Create a buttom to print label of a registered(with TRX purchase entry).
+
+
+[Done!]9#Buildozer on Ubuntu Debug steps.
+
+
+10#make SQl function ixSp to verify the items agent has on hold, status assigment and last step + all the items under employee ID!
+[Create set of items of assignable computer for that matter! :)]
+11#!!! Make rule to just be able to assign from the set of sub cat items assignable for agent, one at the time! e.g one SubID 15(CPU) at the time except for monitors! :)))))))
+
+
+12#Make version of the project with the versionables files after making a succesfull using files app :))))
+
+13#Get assignable version for Buildozer.espec file>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+kivy-garden.zbarcam 2020.524
+pip install kivy-garden.zbarcam
+
+
+
+__Versions__
+python3 --3.10.4--
+kivymd == 0.104.2
+kivy == 2.1.0
+sqlalchemy == 1.4.36
+pandas == 1.4.2
+zbarcode == 2020.524 <#?>
+
+
+__ALL__
+python3,sqlalchemy == 1.4.36,kivy == 2.1.0,kivymd == 0.104.2,pandas == 1.4.2,smtplib,qrcode,PIL,io,zbarcode,sys
+
+
+
+[INFO   ] [deps        ] Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] [deps        ] Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] [deps        ] Successfully imported "kivy_deps.sdl2" 0.4.5
+
+
+
+
+
+
+
+
+
+{{Debugging errors}}<<<<<<<<<<<<<sqlalchemy>>>>>>>>>>>
+android/platform/python-for-android/pythonforandroid/recipes/sqlalchemy/zipsafe.patch
+[DEBUG]:        patching file setup.py
+[DEBUG]:        Hunk #1 FAILED at 145.
+[DEBUG]:        1 out of 1 hunk FAILED -- saving rejects to file setup.py.rej
+
+
+
+
+
+
+0:05 - Step 1[Done!]
+     - Download Latest Version Of Ubuntu
+     - Ubuntu OS : https://ubuntu.com/download/desktop
+0:10 - Step 2[Done!]
+     - Download Latest Version Of VirtualBox
+     - VirtualBox : https://www.virtualbox.org/wiki/Downl...
+0:16 - Step 3[Done!]
+     - Install VirtualBox On Your Pc
+0:29 - Step 4[Done!]
+     - Create A Virtual Machine
+0:48 - Step 5[Done!]
+     - Fix Network Settings For VM
+1:07 - Step 6[Done!]
+     - Install Ubuntu On The VM
+2:19 - Step 7
+     - Make Ubuntu Easier To Use
+     - Command 1: sudo apt install linux-headers-$(uname -r) build-essential dkms
+3:27 - Step 8
+     - Install Some Packages
+     - Tip: Use Control + Shift + C to Copy and Control + Shift + V to Paste
+     - Command 1: sudo apt-get install git libssl-dev cython3
+3:45 - Step 9
+     - Fix Problems With Cython
+     - Command 1: cd /bin/ && sudo gedit cython
+     - Write 'cython3 $@' in the text editor and save it (control + s)
+     - Command 2: sudo chmod 755 cython
+     - Return To Home Directory Using 'cd ~' command
+4:33 - Step 10
+     - Download And Install Buildozer 
+     - Command 1: git clone https://github.com/kivy/buildozer.git
+     - Command 2: sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev
+     - Command 3: cd ..
+     - Command 4: cd buildozer/
+     - Command 5 sudo python3 setup.py install
+5:18 - Step 11
+     - Copy Your Kivy Code In a Folder In Ubuntu
+     - Tip: Use Control + C to Copy and Control + V To Paste In Text Editors
+6:03 - Step 12
+     - Create A .spec File For Your Kivy Code
+     - Command 1: cd ..
+     - Command 2: cd kivyapp/
+     - Command 3: buildozer init
+6:57 - Step 13
+     - Create The App For Android (Apk)
+     - Command 1: buildozer android debug deploy run
+
+
+
+
+pip install https://github.com/kivy/buildozer/archive/master.zip
+
+
+
+
+
+
+
+
+
+iTRX_Movement
+#####A#################B##############C########D############E############F############G#############H############
+#Movement_ID : Movement_Type_ID : Date_time : Item_ID : Employee_ID : Location_ID: Condition_ID : User_ID#######
+###############################################################################################################
+
+A]# Movement_ID: Unic Transaction to look for in the item cycle /agent resposive!
+
+
+B]# Movement_Type_ID from iCAT_Movement_Type ###for registering == 1 for Purchase  
+##############Movement_Type_ID = '1'(direct input on the iTRX)
+
+
+C]# Date_Time Convert to Str() and get that from SQL time not Python on CURRENT_TIMESTAMP
+
+
+D]# Item_ID Unic Item Code from iCAT_Item(used also to get item Cycle and Item Responsive)(not cointing realted)
+	select Item_ID  from iCAT_Item where QR= 'ICON_EP15ALV6'
+
+
+E]* Employee_ID from iCAT_Employee (on movement type 'Purchase' Employee_ID  == '99999' )(emp on other transactions)
+	
+
+
+F]# Location_ID from iCAT_location where WFH == 6 (already a case in agent responsive) for purchase == '1'
+
+
+G]# Condition_ID from iCAT_Condition 1 == brand new
+
+
+H]# User_ID from  iCAT_User User_ID 3 == Puchase Division
+
+
+Assignation
+self.Current_Item_ID // for current Item(applis for 3 assignators)!
+
+
+
+
+/*Assignation*/
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+					values('2', CURRENT_TIMESTAMP, '{self.Current_Item_ID}', '{self.employee_requested}', '{emploc id}', '{self.item_current_condition_ID}', '{self.user_ID}' )
+
+
+/*Deallocation*/
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+												values('3', CURRENT_TIMESTAMP, '{self.Current_Item_ID}', '99999', '1', '1', '3' )
+
+
+/*scratch*/
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+												values('6', CURRENT_TIMESTAMP, '{self.Current_Item_ID}', '99999', '1', '1', '3' )
+
+
+
+declare @Ultimo_paso int=(select max(Movement_ID) as Movement_ID
+	                          from iTRX_Movement
+							  where Item_ID='43' )
+
+	--Visualizar el ciclo de un ITEM
+	select P.Movement_ID
+		  ,Q.Movement_Type_DSC
+		  ,V.User_DSC
+		  ,T.Location_DSC
+		  ,case
+			  when P.Location_ID=6 then S.UTM_X
+			  else T.UTM_X
+		   end UTM_X
+		  ,case
+			  when P.Location_ID=6 then S.UTM_Y
+			  else T.UTM_Y
+		   end UTM_Y
+		  ,P.Date_Time as Date_Time
+		  ,R.Item_DSC
+		  ,R.QR
+		  ,S.First_Name+' '+S.Last_Name as Employee_DSC
+		  ,U.Condition_DSC
+		  ,U.Condition_ID
+		  ,P.Employee_ID
+		  
+
+	from iTRX_Movement as P inner join iCAT_Movement_Type as Q on P.Moment_Type_ID=Q.Movement_Type_ID
+							inner join iCAT_Item          as R on P.Item_ID=R.Item_ID
+							inner join iCAT_Employee      as S on P.Employee_ID=S.Employee_ID
+							inner join iCAT_Location      as T on P.Location_ID=T.Location_ID
+							inner join iCAT_Condition     as U on P.Condition_ID=U.Condition_ID
+							inner join iCAT_User          as V on P.User_ID=V.User_ID
+							inner join iCAT_Employee	  as Y on P.Employee_ID = Y.Employee_ID
+
+	where P.Movement_ID=@Ultimo_paso
+	order by P.Date_Time
+
+
+
+You have to take two steps:
+Update the table to delete all NULL values: UPDATE table_name SET col_name = 0 WHERE col_name IS NULL;
+Alter the table and change the column to not nullable: ALTER TABLE table_name ALTER COLUMN col_name data_type NOT NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+												values('1', CURRENT_TIMESTAMP, '36', '99999', '1', '1', '3' )
+
+/*Assignation*/
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+												values('2', CURRENT_TIMESTAMP, '{self.Current_Item_ID}', '99999', '1', '1', '3' )
+
+
+/*Deallocation*/
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+												values('3', CURRENT_TIMESTAMP, '{self.Current_Item_ID}', '99999', '1', '1', '3' )
+
+
+/*scratch*/
+insert into iTRX_Movement(Moment_Type_ID, Date_Time, Item_ID, Employee_ID, Location_ID, Condition_ID, User_ID) 
+												values('6', CURRENT_TIMESTAMP, '{self.Current_Item_ID}', '99999', '1', '1', '3' )
+
+
+
+<##Smart Homes##><<Project>><<OB>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
