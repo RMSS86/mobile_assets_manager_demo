@@ -1,0 +1,42 @@
+@use "../../../sass/libs/animations";
+@use "../../../sass/libs/mixins";
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; //this will affect button!
+}
+
+.elements {
+  &__header {
+    &-logo {
+      width: 63%;
+      margin-bottom: -1.8rem;
+      ///margin top on media query
+      margin-top: 4.5rem;
+
+      @include animations.animationModel(moveInLeft, 1s, ease-out);
+      @include mixins.respond(big-desktop) {
+        margin-top: 27rem;
+      }
+      @include mixins.respond(tab-land-plus) {
+        margin-top: 5.1rem;
+      }
+
+      @include mixins.respond(phone-large) {
+        width: 81%;
+        margin-top: 19rem;
+      }
+      @include mixins.respond(phone) {
+        width: 81%;
+        margin-top: 19rem;
+      }
+      @include mixins.respond(phone-small) {
+        width: 81%;
+        margin-top: 12rem;
+      }
+    }
+  }
+}

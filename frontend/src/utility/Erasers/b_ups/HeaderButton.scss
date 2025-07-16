@@ -1,0 +1,70 @@
+@use "../../../sass/libs/mixins";
+@use "../../../sass/base/themeColors";
+@use "../../../sass/libs/vars";
+@use "../../../sass/libs/animations";
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: vars.$default-btn-font-size;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+
+    &::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+  } //psudo element for when we click the item
+
+  &-white {
+    background-color: themeColors.$colors-regular-btn;
+    color: themeColors.$colors-regular-btn-letering;
+
+    &::after {
+      background-color: themeColors.$colors-regular-btn;
+    }
+  }
+  &-green {
+    background-color: themeColors.$color-secondary-light;
+    color: themeColors.$colors-regular-btn-letering;
+
+    &::after {
+      background-color: themeColors.$colors-regular-btn;
+    }
+  }
+  //visited when the user clicked the element
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-animated {
+    @include animations.animationModel(moveUp, 0.5s, ease-out);
+    animation-fill-mode: backwards;
+    //aniation duration type delay
+  }
+}

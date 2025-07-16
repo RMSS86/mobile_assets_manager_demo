@@ -1,0 +1,34 @@
+@use "../../../sass/libs/animations";
+@use "../../../sass/libs/mixins";
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  @include mixins.respond(phone-large) {
+    top: 18rem;
+    left: 45%;
+  }
+}
+
+.logo {
+  height: 66px;
+  transition: all 0.5s;
+  @include animations.animationModel(moveInLeft, 1s, ease-out);
+  @include mixins.respond(phone) {
+    height: 60px;
+  }
+  @include mixins.respond(phone-large) {
+    height: 66px;
+  }
+  @include mixins.respond(tab-land-plus) {
+    height: 72px;
+  }
+  &:hover {
+    transform: scale(1.3);
+  }
+
+  ////END////END/////END////
+  ////END////END/////END////
+}
