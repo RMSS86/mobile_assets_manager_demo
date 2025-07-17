@@ -17,9 +17,28 @@ developled entiery in python using a the Kivy Material Design (KivyMD) multi-pla
 
 This application uses QR based tecnology in order to create catalogs over a simple SQL ERD architectured database, that through SQLAlchemy and pandas, make an API call directly to the database over the always amazing MS SQL Server using stored procedures 'xPs' and returning the data 'realtime' after a simple JOIN Query.
 
+## Technologies that were Used
+<p align='center'>
+  <a href='https://skillicons.dev'>
+    <img src='https://skillicons.dev/icons?i=ps,sqlite,react,js,ts,express,sass' />
+  </a>
+</p>
 
 ![alt text](frontend/public/media/avatar2.png)
 
+> Dedicated Media
+<kbd>
+
+![alt text](frontend/public/media/c4569646-ec6b-45bb-8a17-93e0ee38ac55.png)
+
+![alt text](frontend/public/media/ad5d7635-e631-4cbe-a85d-611fcfbf3810.png)
+
+</kbd>
+
+> Check out the to-client rough demo presentation in canvas
+
+![alt text](frontend/public/media/presentation_ref.png)
+https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 The following ```SQL``` Query demostrates the way the simple ```node.js``` backend serves and replies to the userinterface once the QRCode is scanned from the KivyMD textured interface, returning an object that ```pandas``` and ```SQLAlchemy``` libraries then parses and digest into the mobile ```UI```.
@@ -99,32 +118,14 @@ Though originally intended for prototype and demo porpuses, at time this porduct
 
 So this was the perfect moment to give this KivyMD a try and the result exceeded expectations, there are some inconveninces such a the implementation of the buildozer page that required either wsl2 integration for linux distribution or a Virtual machine in order to compile the .aapk file, that in Flutter is no deal.
 
-## Technologies that were Used
-<p align='center'>
-  <a href='https://skillicons.dev'>
-    <img src='https://skillicons.dev/icons?i=ps,sqlite,react,js,ts,express,sass' />
-  </a>
-</p>
 
-<kbd>
-
-![alt text](frontend/public/media/c4569646-ec6b-45bb-8a17-93e0ee38ac55.png)
-
-![alt text](frontend/public/media/ad5d7635-e631-4cbe-a85d-611fcfbf3810.png)
-
-</kbd>
-
-All assets were designed and created in
+> All assets were designed and created in
 <p align='center'>
   <img src="https://img.shields.io/badge/Adobe%20Illustrator-FF9A00?style=for-the-badge&logo=adobe%20illustrator&logoColor=white" />
   <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white" />
 
 </p>
 
-> Check out the to-client rough demo presentation in canvas
-
-![alt text](frontend/public/media/presentation_ref.png)
-https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 <!-- <p align="center">
   
