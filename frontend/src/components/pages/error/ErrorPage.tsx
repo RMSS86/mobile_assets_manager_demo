@@ -6,7 +6,7 @@ const ContextType = "div";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function ErrorPage({
   children,
-  _className='error_layout',
+  _className='error__layout',
   _errorMsg,
   _style,
   _onClick,
@@ -39,9 +39,7 @@ export default function ErrorPage({
       <Header />
       <Sidebar />
       <PageContents
-        // _style={{
-        //   height: "69vh",
-        // }}
+        _className="outlet"
         _errStatus={_errStatus}
         _errMessage={_errMsg}
         _errStsText={_errStsText}

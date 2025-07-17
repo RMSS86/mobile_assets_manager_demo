@@ -1,3 +1,11 @@
+@use '../../../sass/layout/grid';
+
+.outlet{
+   
+        @include grid.area_main();
+    
+}
+
 
 // @use "../../../sass/libs/mixins";
 

@@ -70,7 +70,7 @@ body {
 
   box-sizing: border-box;
   padding: vars.$body-padding-small;
-  @include mixins.background(themeColors.$color-surface-light);
+  @include mixins.background(themeColors.$color-general-bg);
   color: themeColors.$color-surface-dark;
 
 }

@@ -6,18 +6,22 @@
 
 @mixin grid_general(
   $min_val:300px,
-  $max_val:1fr
+  $max_val:1fr,
+  $fit:auto-fit,
   ){
   display: grid; //> GENERAL GRID DISPLAY
-  border: 1px solid themeColors.$color-inverse-primary-dark;
-  grid-template-columns: repeat(auto-fit, minmax($min_val, $max_val));
+  //border: 1px solid themeColors.$color-inverse-primary-dark;
+  grid-template-columns: repeat($fit, minmax($min_val, $max_val));
   gap: vars.$grid-gap-simple;
   justify-content: center;
 }
 
-@mixin grid_body(){
+@mixin grid_body(
+  $cols:2, 
+  $rep:1fr
+  ){
   display: grid; //> GENERAL GRID DISPLAY
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat($cols, $rep);
   grid-template-areas: 
   'navbar navbar'
   'sidebar main'

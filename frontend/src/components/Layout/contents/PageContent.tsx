@@ -6,7 +6,7 @@ const ContextType = "div";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function PageContents({
   children,
-  _className='root__layout',
+  _className,
   _errStatus,
   _errMessage,
   _errStsText,

@@ -4,7 +4,7 @@ export default function HomePage({
   _componentProps,  
   children, 
   _className='homepage',
-  _style = { height: "86vh" },
+  _style ,
   _onClick, 
   ...rest
 }: _props) {
@@ -21,8 +21,7 @@ export default function HomePage({
   return (
     <>
       <_contextType {...rest} className="" onClick={_onClick} style={_style}>
-       
-        <TestQueryComponent />
+       <Landing_section_brand /> 
       </_contextType>
     </>
   );
@@ -66,3 +65,6 @@ import {
   showAlert,
   // @ts-ignore
 } from "../../../utility/imports.js";
+import Landing_sections from "./sections/Landing_sections.js";
+import Landing_section_brand from "./sections/Landing_Section_Brand.js";
+

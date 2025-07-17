@@ -17,7 +17,7 @@ export default function Header({
     <>
       <_contextType
         {...rest}
-        className="header"
+        className="header nav"
         onClick={_onClick}
         style={{}}
       >

@@ -1,12 +1,16 @@
 // import React, { useEffect, useRef, useState } from "react";
 
+const ContextType = "section";
+const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function RootLayout({
+export default function Landing_sections({
   children,
-  _className, 
+  _className,
+  _id = ContextId,
   _style,
-  _onClick, //@ts-ignore
+  _onClick,
+  _onCompClick,
   ...rest
 }: _defaultProps) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
@@ -15,14 +19,19 @@ export default function RootLayout({
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
-    <>
-      <Header />
-      <Sidebar />
-      <main className="outlet">
-          <Outlet />
-      </main>
-      <Footer />
-    </>
+    <ContextType
+      {...rest}
+      id={_id}
+      className={_className}
+      onClick={_onClick}
+      style={_style}
+    >
+
+        
+
+
+      {children}
+    </ContextType>
   );
 }
 
@@ -30,19 +39,16 @@ export default function RootLayout({
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 type _defaultProps = {
   children?: React.ReactNode;
-
+  _id?: string;
   _className?: string;
   _style?: React.CSSProperties;
   _onClick?: () => void;
+  _onCompClick?: () => void;
 };
 
-//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
-/////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
-import { Outlet } from "react-router"; //@ts-ignore
-// import { Header, Footer } from "../../utility/imports.js";
-import Header from "../UI/header/Header";
-import Footer from "../UI/footer/Footer";
-import Sidebar from "../UI/elements/side/Sidebar";
+import TestQueryComponent from '../test/Test';
+import Landing_section_brand from './Landing_Section_Brand';
+//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
+//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './LayOut.scss';
-
+import './Landing_sections.scss';

@@ -91,7 +91,7 @@ export default function TopNavigator({
 
       <ContextType
         {...rest}
-        className="top-nav"
+        className="top-nav nav"
         onClick={_onClick}
         style={_style}
       >
