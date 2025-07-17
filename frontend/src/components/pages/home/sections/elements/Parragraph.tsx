@@ -6,7 +6,10 @@ const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function Paragragh_landing({
   children,
-  _className,
+  _className = "paragragh",
+  _stack = false,
+  _title,
+  _desc,
   _id = ContextId,
   _style,
   _onClick,
@@ -26,20 +29,28 @@ export default function Paragragh_landing({
       onClick={_onClick}
       style={_style}
     >
-    <div className="">
-        <div className="">
-            <div className="">
-                 <div className="">
-                     <div className="">
-                        <h1 className="">Easy Assets Manager</h1>
-                        <p className="">thisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthis </p>
-        
-                    </div>
-                </div>
-            </div>
+      <div className="paragragh__wrapper">
+        <div className="paragragh__wrapper-col">
+          <h1 className="paragragh__title">{_title}</h1>
+          <p className="paragragh__desc">{_desc} </p>
         </div>
-    </div>
-
+      </div>
+      {_stack && (
+        <div>
+          <p className="paragragh__stack">
+            <a href="https://skillicons.dev">
+              <img 
+                className="paragragh__stack-img"
+                src="https://skillicons.dev/icons?i=py,sqlite,react,js,ts,sass,express"
+              />
+            </a>
+          </p>
+          <div className="landing__wrapper-footer">
+            <img className="landing__wrapper-foot" alt="personal" src={MotherTechLogo} />
+            <p className="landing__wrapper-credit" >Robbie Solis-Stevenson</p>
+          </div>
+        </div>
+      )}
     </ContextType>
   );
 }
@@ -50,6 +61,9 @@ type _defaultProps = {
   children?: React.ReactNode;
   _id?: string;
   _className?: string;
+  _title?: string;
+  _stack?: boolean;
+  _desc?: string;
   _style?: React.CSSProperties;
   _onClick?: () => void;
   _onCompClick?: () => void;
@@ -58,4 +72,5 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './Section_elements.scss';
+import "./Section_elements.scss";
+import {MotherTechLogo} from '../../../../../utility/assetsImport.js';

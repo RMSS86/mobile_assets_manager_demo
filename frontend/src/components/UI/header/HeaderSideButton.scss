@@ -22,5 +22,9 @@ box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
     height: 6rem;
     margin: 0.3rem;
     border-radius: 12px;
+    &:hover{
+        transform: scale(0.9);
+        transition: all 1s;
+    }
 }
 }

@@ -30,20 +30,19 @@ This application uses QR based tecnology in order to create catalogs over a simp
   </a>
 </p>
 
+> Some from the React.js / SASS Front_end UI
+![alt text](frontend/public/media/landing_page_One.png)
 
 > Dedicated Media
 <kbd>
 
-![alt text](frontend/public/media/c4569646-ec6b-45bb-8a17-93e0ee38ac55.png)
+![alt text](frontend/public/media/branding_two.png)
 
-![alt text](frontend/public/media/ad5d7635-e631-4cbe-a85d-611fcfbf3810.png)
+![alt text](frontend/public/media/branding_one.png)
+
 
 </kbd>
 
-> Check out the to-client rough demo presentation in canvas
-
-![alt text](frontend/public/media/presentation_ref.png)
-https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 The following ```SQL``` Query demostrates the way the simple ```node.js``` backend serves and replies to the userinterface once the QRCode is scanned from the KivyMD textured interface, returning an object that ```pandas``` and ```SQLAlchemy``` libraries then parses and digest into the mobile ```UI```.
@@ -122,6 +121,13 @@ For better performance a ```Graphql``` API structure for performances was the be
 Though originally intended for prototype and demo porpuses, at time this porduct was created as so, I did not have the knowledge enough to create native code plug-ins in Dart using the invoke ChannelMethod, also, at the time there were some resources Python had avaiable that wasn't available in Kotlin or Swift.
 
 So this was the perfect moment to give this KivyMD a try and the result exceeded expectations, there are some inconveninces such a the implementation of the buildozer page that required either wsl2 integration for linux distribution or a Virtual machine in order to compile the .aapk file, that in Flutter is no deal.
+
+> Check out the to-client rough demo presentation in canvas
+
+![alt text](frontend/public/media/presentation_ref.png)
+https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+***(presentantion in page #3)***
 
 
 > All assets were designed and created in

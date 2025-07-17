@@ -12,8 +12,9 @@
     flex-direction: column;
     display: flex;
     justify-content: space-between;
-    text-align: center;
-
+    text-align: center;   
+    
+    
     &__user{
         padding: 1rem;
         border-radius: 12px 12px 24px 24px;
@@ -44,7 +45,7 @@
         margin: auto 4rem;
         padding: 2rem 0;
         border-radius: 12px;
-        background-color: #1614144e;
+        background-color: #2226339c;
         @include layout-elements.ul_cleaner(column);
         font-size: 2.4rem;
 
@@ -56,7 +57,7 @@
         &-item{
             @include layout-elements.li_cleaner();
             margin: 0.3rem 1rem;
-            background-color: #00000089;
+            background-color: #000000aa;
             padding: 1rem 2rem;
             border-radius: 8px;
         }   
@@ -93,4 +94,5 @@
 
 .show{
   display: none;
+  transition: all 1.5s;
 }

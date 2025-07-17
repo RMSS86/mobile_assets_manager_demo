@@ -22,6 +22,7 @@ export default function HomePage({
     <>
       <_contextType {...rest} className="" onClick={_onClick} style={_style}>
        <Landing_section_brand /> 
+       <Landing_section_product />
       </_contextType>
     </>
   );
@@ -67,4 +68,5 @@ import {
 } from "../../../utility/imports.js";
 import Landing_sections from "./sections/Landing_sections.js";
 import Landing_section_brand from "./sections/Landing_Section_Brand.js";
+import Landing_section_product from "./sections/Landing_section_product.js";
 
