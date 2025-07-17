@@ -37,6 +37,7 @@ export default function ErrorPage({
       style={_style}
     >
       <Header />
+      <Sidebar />
       <PageContents
         // _style={{
         //   height: "69vh",
@@ -70,6 +71,7 @@ import './ErrorPage.scss';
 import PageContents from "../../Layout/contents/PageContent";
 import Footer from "../../UI/footer/Footer";
 import Header from "../../UI/header/Header"; //@ts-ignore
+import Sidebar from "../../UI/elements/side/Sidebar";
 
 // if (_error.internal) {
 //    _errStatus = _error.status;
