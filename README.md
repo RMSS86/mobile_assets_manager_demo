@@ -24,7 +24,12 @@ This application uses QR based tecnology in order to create catalogs over a simp
   </a>
 </p>
 
-![alt text](frontend/public/media/avatar2.png)
+<p align='center'>
+  <a>
+    <img src='frontend/public/media/avatar2.png'/>
+  </a>
+</p>
+
 
 > Dedicated Media
 <kbd>
