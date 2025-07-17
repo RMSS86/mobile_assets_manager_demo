@@ -1,2 +1,8 @@
+@use '../../../../../sass/layout/layout-elements';
+@use '../../../../../sass/base/themeColors';
+
 .top-nav {
+  @include layout-elements.top_nav();
+    
 }
+

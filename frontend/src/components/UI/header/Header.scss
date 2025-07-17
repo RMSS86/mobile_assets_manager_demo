@@ -1,0 +1,9 @@
+@use '../../../sass/layout/grid';
+@use '../../../sass/layout/layout-elements';
+
+//> MAIN GRID TAG SELECTOR
+.header {
+    @include grid.area_header();
+        //> DEFINES 
+ 
+}

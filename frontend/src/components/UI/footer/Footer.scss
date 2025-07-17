@@ -1,0 +1,50 @@
+@use '../../../sass/layout/grid';
+@use '../../../sass/layout/layout-elements';
+@use '../../../sass/base/themeColors';
+
+.footer {
+    //> DECLARES GRID GLOBAL LAYOUT VALUE
+    @include grid.area_footer();
+    background-color: #222633;
+    border-radius: 12px 12px 0 0;
+
+    &__nav{
+        @include layout-elements.ul_cleaner();
+        @include layout-elements.footer_nav();
+        margin: 2.1rem; 
+
+    }
+
+    &__item{
+        @include layout-elements.li_cleaner();
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        &:hover{
+        color: themeColors.$color-complementary-negative;
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+    }
+
+    &__link{
+        @include layout-elements.a_cleaner();
+        color: #ffff; 
+    }
+
+    &__foot{
+            text-align: center;
+            color: aliceblue;
+            font-size: 1.2rem;
+            margin: 0 2rem;
+        
+    }
+    &__logo{
+        margin-bottom: 2rem;
+        margin: 2rem 2rem 1rem 2rem;
+        border-radius: 12px;
+        height: 13rem;
+    }
+     &-credit{
+        margin-bottom: 3rem;
+    }
+}

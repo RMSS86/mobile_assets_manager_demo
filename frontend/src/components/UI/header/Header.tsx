@@ -4,15 +4,13 @@ export default function Header({
   _componentProps,
   _children,
   _className,
-  _style,
+  _style, 
   _onClick,
   ...rest
 }: _props) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
-  const fontSize = {
-    fontSize: "3.6rem",
-  };
+
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
@@ -21,23 +19,22 @@ export default function Header({
         {...rest}
         className="header"
         onClick={_onClick}
-        style={fontSize}
+        style={{}}
       >
         {/* //TOP NAV// */}
         <TopNavigator />
         {/* //POP NAV// */}
-        <p>[Header]</p>
       </_contextType>
     </>
   );
 }
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
-const _contextType = "section";
+const _contextType = "nav";
 type _props = _defaultProps & _altProps;
 
 type _defaultProps = {
-  _componentProps?: React.ComponentPropsWithoutRef<"section"> & {
+  _componentProps?: React.ComponentPropsWithoutRef<"nav"> & {
     ///add alternative propierties than the native elements
   };
   _children?: React.ReactNode;

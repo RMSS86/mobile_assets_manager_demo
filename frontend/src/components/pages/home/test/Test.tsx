@@ -63,7 +63,8 @@ export default function TestQueryComponent({
         transition={{ type: "spring", stiffness: 500 }}
         style={fontSize}
       >
-        {_req?._data}
+        {'Hello world!'}
+        {/* _req?._data */}
       </motion.p>
 
       {children}

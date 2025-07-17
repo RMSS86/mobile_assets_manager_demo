@@ -1,5 +1,7 @@
 ///////////////////////////////////////
 ///////////////////////GENERAL UI VARS
+///BODY HEIGHT 
+$default-body-height: 100vh;
 /// $bp-largest: 75em; // 1200px
 $bp-large: 68.75em; // 1100px
 $bp-medium: 56.25em; // 900px
@@ -9,6 +11,7 @@ $bp-smallest: 31.25em; // 500px
 ///////////////GRID
 $grid-grid: 114rem;
 $grid-margin: 60px;
+$grid-gap-simple: 15px;
 
 // GRID
 $grid-width: 114rem;
@@ -19,6 +22,7 @@ $gutter-horizontal-small: 2rem;
 
 ///font
 $default-font-size: 1.6rem;
+$default-link-font-size: 1.5rem;
 ///BUTONS SIZES
 $default-btn-font-size: 1.8rem;
 
@@ -31,7 +35,7 @@ $btn-border-radius_a: 25%;
 $btn-border-radius_b: 50%;
 
 ///GENERAL PADDING
-$body-padding-small: 1.5rem;
+$body-padding-small: 0.5rem;
 $body-padding-medium: 2rem;
 $body-padding-large: 3rem;
 

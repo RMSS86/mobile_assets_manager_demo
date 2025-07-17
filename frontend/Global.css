@@ -1,0 +1,44 @@
+:root{
+    --default-color: #ffff;
+    --default-grid-cols: 2;
+    --default-grid-rows: auto 1fr auto;
+    --default-sidebar-width: 300px;
+}
+
+.grid{
+  /* GENERAL LAYOUT RESPONSIVE GRID */
+  /* FOR DESIGN DETAILS USE SASS MEDIA QUERIES */
+  display: grid; 
+  min-height: 100vh;
+  grid-template-columns: var(--default-sidebar-width) 1fr ;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+  'navbar navbar'
+  'sidebar main'
+  'footer footer';
+}
+
+aside{
+  height: 85vh;
+  top: 58px;
+  position: sticky;
+  align-self: start;
+}
+
+nav{
+  top: 0;
+  position: sticky;
+
+}
+
+@media(max-width:800px){
+  body{
+    grid-template-columns: 1fr;
+  }
+  aside{
+    position: fixed;
+    width: 300px;
+  }
+
+}
+

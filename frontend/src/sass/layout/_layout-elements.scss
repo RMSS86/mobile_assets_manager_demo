@@ -1,0 +1,32 @@
+
+@mixin header_layout($top:0){
+    top: $top;
+    position: sticky;
+}
+
+@mixin top_nav(){
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin footer_nav(){
+    display: flex;
+    justify-content: center;
+}
+
+//> CYCLICAL HTML DECORATORS 
+@mixin ul_cleaner($align:row){
+    //> ul ON FLEX ROW DISPLAY
+    flex-direction: $align;
+    display: flex;
+}
+
+@mixin li_cleaner(){
+    //> li REMOVES LINING DOT
+    list-style-type: none;
+}
+
+@mixin a_cleaner(){
+    //> a REMOVES UNDESLINED DECORATION
+    text-decoration: none;
+}

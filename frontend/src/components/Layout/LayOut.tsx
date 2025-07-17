@@ -17,12 +17,11 @@ export default function RootLayout({
   return (
     <>
       <Header />
+      <Sidebar />
       <main>
         <Outlet />
       </main>
       <Footer />
-
-      {/* {children} */}
     </>
   );
 }
@@ -43,3 +42,5 @@ import { Outlet } from "react-router"; //@ts-ignore
 // import { Header, Footer } from "../../utility/imports.js";
 import Header from "../UI/header/Header";
 import Footer from "../UI/footer/Footer";
+import Sidebar from "../UI/elements/side/Sidebar";
+

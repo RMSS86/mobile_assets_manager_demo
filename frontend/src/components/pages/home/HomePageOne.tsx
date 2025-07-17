@@ -1,11 +1,11 @@
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function HomePage({
-  _componentProps,
-  children,
-  _className,
-  _style = { height: "80vh" },
-  _onClick,
+  _componentProps,  
+  children, 
+  _className='homepage',
+  _style = { height: "86vh" },
+  _onClick, 
   ...rest
 }: _props) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
@@ -20,8 +20,8 @@ export default function HomePage({
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
     <>
-      <_contextType {...rest} className="" onClick={_onClick} style={{}}>
-        <p>[ HOMEPAGE CONTENTS! ]</p>
+      <_contextType {...rest} className="" onClick={_onClick} style={_style}>
+       
         <TestQueryComponent />
       </_contextType>
     </>
@@ -29,11 +29,11 @@ export default function HomePage({
 }
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
-const _contextType = "header";
+const _contextType = "section";
 type _props = _defaultProps & _altProps;
 
 type _defaultProps = {
-  _componentProps?: React.ComponentPropsWithoutRef<"header"> & {
+  _componentProps?: React.ComponentPropsWithoutRef<"section"> & {
     ///add alternative propierties than the native elements
   };
   children?: React.ReactNode;

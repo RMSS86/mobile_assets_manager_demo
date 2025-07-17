@@ -1,0 +1,26 @@
+@use '../../../sass/base/themeColors';
+
+.side_btn {
+background-color: #222633;
+border-radius: 12px;
+flex-direction: row;
+display: flex;
+font-size: 1.8rem;
+box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+
+
+&__text{
+    color: #ffff;
+    padding: 2rem 2rem 1rem 0.5rem;
+    &:hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+}
+
+&__logo{
+    height: 6rem;
+    margin: 0.3rem;
+    border-radius: 12px;
+}
+}

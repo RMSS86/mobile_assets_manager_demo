@@ -1,0 +1,6 @@
+@use '../../../sass/layout/grid';
+
+.homepage {
+     display: inline;
+    @include grid.area_main();
+}

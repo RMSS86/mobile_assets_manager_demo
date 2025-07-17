@@ -2,6 +2,7 @@
 @use "../libs/vars";
 @use "../base/themeColors";
 @use "../libs/breakpoints";
+@use "../layout/grid";
 
 *,
 *::after,
@@ -13,6 +14,7 @@
 html,
 body {
   overflow-x: hidden;
+  //min-height: vars.$default-body-height; //> DEFAULT HEIGHT
 }
 html {
   // This defines what 1rem is
@@ -71,9 +73,19 @@ body {
   @include mixins.background(themeColors.$color-surface-light);
   color: themeColors.$color-surface-dark;
 
+}
+
+.root{
+  
+  @include grid.grid_body();
   @include mixins.respond(tab-port) {
     padding: 0;
   }
+  
+}
+
+.modal{
+  display: none;
 }
 
 // ::selection {

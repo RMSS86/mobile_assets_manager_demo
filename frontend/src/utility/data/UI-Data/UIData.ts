@@ -1,8 +1,8 @@
 const HEADER_DATA: _menuFeature[] = [
   { id: 0, menu: "Home", direct: "" },
-  { id: 1, menu: "BBB", direct: "" },
-  { id: 2, menu: "CCC", direct: "" },
-  { id: 3, menu: "DDD", direct: "" },
+  { id: 1, menu: "Items", direct: "" },
+  { id: 2, menu: "Track", direct: "" },
+  { id: 3, menu: "QR", direct: "" },
 ];
 
 const FOOTER_DATA: footerTag[] = [

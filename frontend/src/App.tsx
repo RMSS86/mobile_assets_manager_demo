@@ -4,6 +4,7 @@ export default function App() {
   /////FUNCTIONS////FUNCTIONS////FUNCTIONS////FUNCTIONS////FUNCTIONS//////
   /////FUNCTIONS////FUNCTIONS////FUNCTIONS////FUNCTIONS////FUNCTIONS//////
   const { globalUser, setGlobalUser } = useUserContext();
+  
   useEffect(() => {
     useLocalUser({
       _user: globalUser,

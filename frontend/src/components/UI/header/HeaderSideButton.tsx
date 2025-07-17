@@ -1,15 +1,16 @@
 // import React, { useEffect, useRef, useState } from "react";
 
-const ContextType = "ul";
+const ContextType = "section";
+const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function FooterLinks({
+export default function HeaderSideButton({
   children,
-  _className,
-
-  _footerLinksSrc,
+  _className='side_btn',
+  _id = ContextId,
   _style,
   _onClick,
+  _onCompClick,
   ...rest
 }: _defaultProps) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
@@ -20,43 +21,32 @@ export default function FooterLinks({
   return (
     <ContextType
       {...rest}
-      className="footer__nav"
-      onClick={_onClick}
-      style={_style} 
+      id={_id}
+      className={_className}
+    //   onClick={_onClick}
+      style={_style}
     >
-      {FOOTER_DATA.map((e) => _Links(e))}
+        <img alt='logo' src={GeneralLogo} className='side_btn__logo' onClick={_onClick}/>
+        <a className='side_btn__text'>e-AM</a>
+      {children}
     </ContextType>
   );
 }
-/////I/////////////////////////////////////////////////INNER ELEMENTS
-/////I///////////////////////////////////////////////////////////////
-const _Links = (feat: footerTag) => {
-  return (
-    <li className="footer__item" key={feat.tag}>
-      <a className="footer__link" href={feat.link}>
-        {feat.tag}
-      </a>
-    </li>
-  );
-};
+
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 type _defaultProps = {
   children?: React.ReactNode;
-
-  _footerLinksSrc?: string[];
+  _id?: string;
   _className?: string;
   _style?: React.CSSProperties;
   _onClick?: () => void;
-};
-type footerTag = {
-  tag: string;
-  link: string;
-  _function?: () => {};
+  _onCompClick?: () => void;
 };
 
+
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
-/////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////////
+//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import "./Footer.scss";
-import { FOOTER_DATA } from "../../../utility/data/UI-Data/UIData";
+import './HeaderSideButton.scss'; //@ts-ignore
+import {GeneralLogo,User,userLogo} from '../../../utility/assetsImport.js';

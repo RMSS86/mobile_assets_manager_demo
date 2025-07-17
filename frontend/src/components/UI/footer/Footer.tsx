@@ -9,9 +9,7 @@ export default function Footer({
 }: _defaultProps) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
-  const fontSize = {
-    fontSize: "3.6rem",
-  };
+
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
@@ -19,10 +17,13 @@ export default function Footer({
       {...rest}
       className={_className}
       onClick={_onClick}
-      style={fontSize}
+      style={{}}
     >
-      <p>[Footer]</p>
       <FooterLinks />
+      <div className="footer__foot">
+        <img className="footer__logo" src={GeneralLogo}/>
+        <p className="footer-credit">Created by Robbie Solis Stevenson 2022</p>
+      </div>
       {/* {children} */}
     </ContextType>
   );
@@ -43,4 +44,5 @@ type _defaultProps = {
 /////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
 import "./Footer.scss"; //@ts-ignoreimport FooterLinks from "./FooterLinks";
-import FooterLinks from "./FooterLinks";
+import FooterLinks from "./FooterLinks";//@ts-ignore
+import {GeneralLogo} from '../../../utility/assetsImport.js';

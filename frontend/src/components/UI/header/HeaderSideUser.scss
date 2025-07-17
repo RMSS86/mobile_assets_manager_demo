@@ -1,0 +1,26 @@
+
+.sider_btn {
+background-color: #222633;
+border-radius: 12px;
+flex-direction: row;
+display: flex;
+font-size: 1.8rem;
+box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+
+
+&__tag{
+    color: #a9baec;
+    padding: 2.3rem 0.5rem 1rem 2rem;
+    &:hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+}
+
+&__user{
+    height: 6rem;
+    width: 6rem;
+    margin: 0.3rem;
+    border-radius: 12px;
+}
+}

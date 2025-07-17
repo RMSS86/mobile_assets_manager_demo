@@ -1,6 +1,44 @@
 ///////////////////////////////////////
 ////////////////////////GRID TEMPLATE
 @use "../libs/mixins";
+@use '../base/themeColors';
+@use '../libs/vars';
+
+@mixin grid_general(
+  $min_val:300px,
+  $max_val:1fr
+  ){
+  display: grid; //> GENERAL GRID DISPLAY
+  border: 1px solid themeColors.$color-inverse-primary-dark;
+  grid-template-columns: repeat(auto-fit, minmax($min_val, $max_val));
+  gap: vars.$grid-gap-simple;
+  justify-content: center;
+}
+
+@mixin grid_body(){
+  display: grid; //> GENERAL GRID DISPLAY
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  'navbar navbar'
+  'sidebar main'
+  'sidebar footer';
+}
+
+@mixin area_header() {
+  grid-area: navbar;
+}
+
+@mixin area_main() {
+  grid-area: main;
+}
+
+@mixin area_aside() {
+  grid-area: sidebar;
+}
+
+@mixin area_footer() {
+  grid-area: footer;
+}
 
 ///////////////////////////////////////////////
 //////////////////////////////////////// 1 OF 2

@@ -68,6 +68,13 @@ export default function TopNavigator({
     }
   };
 
+  const _sidebar = document.getElementById('sidebar');
+
+  function toggleSidebar(){
+    _sidebar?.classList.toggle('show');
+    console.log('clicked!');
+  }
+
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
@@ -89,10 +96,12 @@ export default function TopNavigator({
         style={_style}
       >
         {/* //lOGO// */}
+        < HeaderSideButton _onClick={toggleSidebar}/>
         {/* //SEARCH// */}
         {/* //NAV-LINKS// */}
         <TopNavLinks _userContext={globalUser} _invokeModal={_invokeModal} />
         {/* //USER AVATAR// */}
+        <HeaderSideUser />
       </ContextType>
     </>
   );
@@ -122,7 +131,8 @@ import {
 //   BG_Lettering_grey,
 // } from "../../../../../utility/imports.js";
 //@ts-ignore
-import "./TopNavigator.scss";
+import "./TopNavigator.scss";//@ts-ignore
+import "../../side/Sidebar.scss";
 import { useUserContext } from "../../../../../store/UserContext.tsx";
 import { useRef } from "react";
 import FetchData from "../../../../../requests/http.ts"; //@ts-ignore
@@ -134,4 +144,6 @@ import { useLocalUser } from "../../../../../models/hooks/useLocalUser.tsx";
 import { GeneralLogo } from "../../../../../utility/assetsImport.js";
 import TopNavLinks from "../../links/TopNavLinks.tsx";
 import SessionOutModal from "../../cards/modal/SessionOutModal.tsx";
-import { useLogOut } from "../../../../../models/hooks/useLogOut.tsx";
+import { useLogOut } from "../../../../../models/hooks/useLogOut.tsx";import HeaderSideButton from "../../../header/HeaderSideButton.tsx";
+import HeaderSideUser from "../../../header/HeaderSideUser.tsx";
+

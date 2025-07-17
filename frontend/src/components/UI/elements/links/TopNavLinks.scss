@@ -1,8 +1,35 @@
+@use '../../../../sass/layout/layout-elements';
+@use '../../../../sass/base/themeColors';
+@use '../../../../sass/libs/vars';
+
 .nav {
+  @include layout-elements.header_layout();
+  
+
   &__links {
+    @include layout-elements.ul_cleaner();
+    background-color: themeColors.$color-inverse-primary-dark;
+    margin: 1.5rem;
+    padding: 1rem 6rem;
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
   }
+
   &__link {
+    @include layout-elements.a_cleaner();
+    color: themeColors.$color-surface-light;
+    &:hover{
+      color: themeColors.$color-complementary-negative;
+      transform: scale(1.1);
+      transition: all 1s;
+    }
   }
+
   &__item {
+    @include layout-elements.li_cleaner();
+    font-size: vars.$default-link-font-size;
+    margin: 0 1rem;
   }
 }
+
+ 

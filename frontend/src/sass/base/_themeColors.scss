@@ -1,25 +1,28 @@
 ////////////////////////////////////
 ////////////////////////LIGHT THEME
-$color-surface-light: #ffff;
-$color-primary-light: #ffff;
-$color-secondary-light: #ffff;
+$color-surface-light: #fff;
+$color-primary-light: #5079F2;
+$color-secondary-light: #6B8DF2;
 
-$color-inverse-primary-light: #ffff;
-$color-inverse-primary-light: #ffff;
-$color-surfaceContainerLow-light: #ffff;
+$color-inverse-primary-light: #F2F2F2;
+$color-inverse-secondary-light: #C4D0F2;
 $color-surfaceDim-light: #ffff;
+$color-complementary-negative: #F2C550;
+
+$color-surfaceContainerLow-light: #ffff;
 $color-primaryFixedDim-light: #ffff;
 $color-inverseSurface-light: #ffff;
 $color-tertiary-light: #ffff;
 
 //> DARK THEME
-$color-surface-dark: #353333;
+$color-surface-dark: #5079F2;
 $color-primary-dark: #28b485;
 $color-secondary-dark: #ffff;
 
-$color-inverse-primary-dark: #ffff;
+$color-inverse-primary-dark: #222633;
+$color-surfaceDim-dark: #4E5159;
+
 $color-surfaceContainerLow-dark: #ffff;
-$color-surfaceDim-dark: #ffff;
 $color-primaryFixedDim-dark: #ffff;
 $color-inverseSurface-dark: #ffff;
 $color-tertiary-dark: #ffff;
