@@ -6,7 +6,7 @@ const ContextType = "div";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function ErrorPage({
   children,
-  _className,
+  _className='error_layout',
   _errorMsg,
   _style,
   _onClick,
@@ -65,7 +65,8 @@ type _defaultProps = {
 /////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
 import { useRouteError } from "react-router-dom";
-
+//@ts-ignore
+import './ErrorPage.scss';
 import PageContents from "../../Layout/contents/PageContent";
 import Footer from "../../UI/footer/Footer";
 import Header from "../../UI/header/Header"; //@ts-ignore

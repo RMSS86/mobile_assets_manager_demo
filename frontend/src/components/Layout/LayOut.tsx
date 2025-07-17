@@ -4,7 +4,7 @@
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function RootLayout({
   children,
-  _className,
+  _className='root_layout', 
   _style,
   _onClick, //@ts-ignore
   ...rest
@@ -43,4 +43,6 @@ import { Outlet } from "react-router"; //@ts-ignore
 import Header from "../UI/header/Header";
 import Footer from "../UI/footer/Footer";
 import Sidebar from "../UI/elements/side/Sidebar";
+//@ts-ignore
+import './LayOut.scss';
 

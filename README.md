@@ -20,7 +20,7 @@ This application uses QR based tecnology in order to create catalogs over a simp
 ## Technologies that were Used
 <p align='center'>
   <a href='https://skillicons.dev'>
-    <img src='https://skillicons.dev/icons?i=ps,sqlite,react,js,ts,express,sass' />
+    <img src='https://skillicons.dev/icons?i=py,sqlite,react,js,ts,express,sass' />
   </a>
 </p>
 
