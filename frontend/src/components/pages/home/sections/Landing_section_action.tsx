@@ -1,34 +1,23 @@
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-/////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function HomePage({
-  _componentProps,  
-  children, 
-  _className='homepage',
-  _style ,
-  _onClick, 
+export default function Landing_section_action({
+  _componentProps,
+  children,
+  _className='actions',
+  _style,
+  _onClick,
   ...rest
-}: _props) {
+}: _props) { 
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
-  ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
-  const _navigator = useNavigate();
 
-  const NavigationHandler = (nav: string) => {
-    _navigator(nav);
-  };
-  //
-  ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
     <>
-      <_contextType {...rest} className={_className} onClick={_onClick} style={_style}>
-       <Landing_section_brand /> 
-       <Landing_section_product />
-       <Landing_section_action />
+      <_contextType {...rest} className={_className} onClick={_onClick} style={{}}>
+        {children}
       </_contextType>
     </>
   );
 }
-/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 const _contextType = "section";
 type _props = _defaultProps & _altProps;
@@ -59,16 +48,6 @@ type _altProps = {
 
 //@ts-ignore
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
-import TestQueryComponent from "./test/Test";
-
-// @ts-ignore
-import "./HomePage.scss";
-import {
-  showAlert,
-  // @ts-ignore
-} from "../../../utility/imports.js";
-
-import Landing_section_brand from "./sections/Landing_Section_Brand.js";
-import Landing_section_product from "./sections/Landing_section_product.js";
-import Landing_section_action from "./sections/Landing_section_action.js";
-
+import { useQuery } from "@tanstack/react-query";
+//@ts-ignore
+import './Landing_sections.scss';

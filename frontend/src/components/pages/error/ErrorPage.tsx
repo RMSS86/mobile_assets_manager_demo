@@ -15,7 +15,7 @@ export default function ErrorPage({
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   const _error = useRouteError();
-  //console.log("error from the ErrorPage ", _error);
+  console.log("error from the ErrorPage ", _error);
 
   let _errStatus = "Ooops...";
   let _errMsg = "Something went wrong!";

@@ -1,10 +1,16 @@
+// import React, { useEffect, useRef, useState } from "react";
+
+const ContextType = "section";
+const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function Footer({
+export default function QrPage({
   children,
-  _className = "footer",
+  _className,
+  _id = ContextId,
   _style,
   _onClick,
+  _onCompClick,
   ...rest
 }: _defaultProps) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
@@ -15,34 +21,29 @@ export default function Footer({
   return (
     <ContextType
       {...rest}
+      id={_id}
       className={_className}
       onClick={_onClick}
-      style={{}}
+      style={_style}
     >
-      <FooterLinks />
-      <div className="footer__foot">
-        <img className="footer__logo" src={GeneralLogo}/>
-        <p className="footer-credit">©2022 Robbie Solis Stevenson on TigerIXT</p>
-      </div>
-      {/* {children} */}
+      {children}
+       <p>[QR_PAGE]</p>
     </ContextType>
   );
 }
 
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
 /////TYPE/////TYPE/////TYPE/////TYPE/////TYPE/////TYPE///////
-const ContextType = "footer";
 type _defaultProps = {
   children?: React.ReactNode;
-
+  _id?: string;
   _className?: string;
   _style?: React.CSSProperties;
   _onClick?: () => void;
+  _onCompClick?: () => void;
 };
 
-//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
-/////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
+//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
+//////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import "./Footer.scss"; //@ts-ignoreimport FooterLinks from "./FooterLinks";
-import FooterLinks from "./FooterLinks";//@ts-ignore
-import {GeneralLogo} from '../../../utility/assetsImport.js';
+import './QrPage.scss';

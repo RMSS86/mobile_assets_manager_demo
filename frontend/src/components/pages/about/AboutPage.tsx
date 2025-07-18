@@ -4,7 +4,7 @@ const ContextType = "section";
 const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function Landing_sections({
+export default function AboutPage({
   children,
   _className,
   _id = ContextId,
@@ -26,11 +26,8 @@ export default function Landing_sections({
       onClick={_onClick}
       style={_style}
     >
-
-        
-
-
       {children}
+       <p>[ABOUT_PAGE]</p>
     </ContextType>
   );
 }
@@ -46,9 +43,7 @@ type _defaultProps = {
   _onCompClick?: () => void;
 };
 
-import TestQueryComponent from '../test/Test';
-import Landing_section_brand from './Landing_Section_Brand';
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './Landing_sections.scss';
+import './QrPage.scss';

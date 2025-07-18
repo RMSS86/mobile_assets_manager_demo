@@ -10,6 +10,8 @@ export const GlobalRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> }, //, loader: _homeLoader
+      { path: "login", element: <LoginPage />},
+      { path: "qr", element:< QrPage />},
       //   {
       //     path: "prod",
       //     children: [
@@ -21,10 +23,7 @@ export const GlobalRouter = createBrowserRouter([
       //       { path: ":id", element: <TourPage />, loader: singleTourLoader },
       //     ],
       //   },
-      //   {
-      //     path: "login",
-      //     element: <LoginPage />,
-      //   },
+
       //   {
       //     path: "signup", ///<
       //     element: <SignupPage />,
@@ -53,12 +52,18 @@ export const GlobalRouterElments = createBrowserRouter(
     <>
       <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
         <Route index={true} element={<HomePage />} />
+        <Route path='items' element={<ItemsPage />} />
+        <Route path='track' element={<TrackPage />} />
+        <Route path='qr' element={<QrPage />} />
+        <Route path='login' element={<LoginPage />} />
+
         {/* //tours// */}
         {/* //:id// */}
       </Route>
     </>
   )
 );
+
 //////ROUTES////ROUTES////ROUTES////ROUTES////ROUTES////ROUTES////ROUTES/////
 //////ROUTES////ROUTES////ROUTES////ROUTES////ROUTES////ROUTES////ROUTES/////
 
@@ -83,15 +88,21 @@ import {
   Route,
   //@ts-ignore
 } from "react-router-dom";
-import { createRoutesFromElements, Navigate, Outlet } from "react-router";
 import RootLayout from "../components/Layout/LayOut";
 import ErrorPage from "../components/pages/error/ErrorPage";
+import LoginPage from "../components/pages/login/LoginPage.js";
+
+import { createRoutesFromElements, Navigate, Outlet } from "react-router";
+
 
 import {
   HomePage,
 
   //@ts-ignore
 } from "../utility/imports.js";
+import QrPage from "../components/pages/qr/QrPage.js";
+import ItemsPage from "../components/pages/items/ItemsPage.js";
+import TrackPage from "../components/pages/track/TrackPage.js";
 
 // import HomePage, { topToursLoader } from "../components/pages/home/Home";
 // import ToursPage, {

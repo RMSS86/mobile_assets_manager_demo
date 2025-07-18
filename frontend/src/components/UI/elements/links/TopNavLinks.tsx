@@ -51,7 +51,7 @@ export default function TopNavLinks({
       ) : (
         <Links
           key={99}
-          _feat="LogIn"
+          _feat="Login"
           _href="login"
           _liClassName="nav__item"
           _navLink="nav__link"

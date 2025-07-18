@@ -60,7 +60,7 @@
     &__header{
 
         &-logo{
-            max-height: 72%;
+            max-height: 66%;
             border-radius: 12px;
             box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
         }
@@ -126,3 +126,12 @@
     box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
     }
 }
+
+.actions{
+    background-color: #1974D2;
+    height: 66vh;
+    border-radius: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+
+

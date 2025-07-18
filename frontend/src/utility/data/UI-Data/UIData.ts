@@ -1,18 +1,17 @@
 const HEADER_DATA: _menuFeature[] = [
-  { id: 0, menu: "Home", direct: "" },
-  { id: 1, menu: "Items", direct: "" },
-  { id: 2, menu: "Track", direct: "" },
-  { id: 3, menu: "QR", direct: "" },
+  { id: 0, menu: "Home", direct: "/" },
+  { id: 1, menu: "Items", direct: "items" },
+  { id: 2, menu: "Track", direct: "track" },
+  { id: 3, menu: "QR", direct: "qr" },
 ];
 
 const FOOTER_DATA: footerTag[] = [
-  { tag: "About", link: "https://linkedin.com" },
-  { tag: "Bookings", link: "#" },
+  { tag: "About", link: "about" },
   { tag: "Stories", link: "#" },
-  { tag: "Events", link: "#" },
-  { tag: "Careers", link: "#" },
-  { tag: "Blog", link: "#" },
-  { tag: "Contact us", link: "#" },
+  { tag: "Tutorials", link: "www.udemy.com" },
+  { tag: "Careers", link: "www." },
+  { tag: "Blog", link: "www.medium.com" },
+  { tag: "Contact us", link: "https://www.linkedin.com/in/robert-solis-stevenson-6a458a265/" },
 ];
 
 export { HEADER_DATA, FOOTER_DATA };

@@ -26,7 +26,7 @@ export default function HeaderSideUser({
       onClick={_onClick}
       style={_style}
     >
-        <a className='sider_btn__tag'>Robert</a>
+        <a className='sider_btn__tag'>Robbie</a>
         <img alt='logo' src={User} className='sider_btn__user' />
       {children}
     </ContextType>
