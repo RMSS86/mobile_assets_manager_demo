@@ -16,6 +16,7 @@
   'navbar navbar'
   'sidebar main'
   'footer footer';
+ 
 }
 
 aside{
@@ -23,6 +24,7 @@ aside{
   top: 58px;
   position: sticky;
   align-self: start;
+  
 }
 
 .nav {

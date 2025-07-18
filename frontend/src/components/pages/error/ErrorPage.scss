@@ -1,9 +1,10 @@
 @use '../../../sass/layout/grid';
 
-.outlet{
-   
+
+.error{
+    &__layout{
         @include grid.area_main();
-    
+    }
 }
 
 

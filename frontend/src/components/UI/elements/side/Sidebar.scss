@@ -15,7 +15,7 @@
     text-align: center;   
     z-index: 11;
     
-    
+
     &__user{
         padding: 1rem;
         border-radius: 12px 12px 24px 24px;
@@ -131,5 +131,9 @@
 
 .show{
     display: none;
-    transition: all 1.5s;
+    opacity:0;
+    transform: translateX(-72%);
+    transition: all 0.5s;
+    transition-behavior: allow-discrete;
+
 }

@@ -9,10 +9,11 @@ box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
 
 
 &__tag{
-    color: #a9baec;
+    color: #ffffffd5;
     padding: 2.3rem 0.5rem 1rem 2rem;
     
     &:hover{
+        color: #fff;
         transform: scale(1.1);
         transition: all 1s;
     }

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const _contextType = "aside";
 
@@ -30,6 +31,7 @@ export default function Sidebar({
             backgroundSize: "cover", 
             backgroundPosition: "center",
           }}>
+            
          <img alt="user" className="sidebar__user-photo" src={User} />
          <div className="sidebar__user-tagbg">
             <p className="sidebar__user-tag">Robbie</p>
@@ -50,6 +52,7 @@ export default function Sidebar({
         />
       ))}
       </ul>
+
          <div className="sidebar-footer">
             <img className="sidebar-foot" alt="personal" src={MotherTechLogo} />
             <p className="sidebar-credit" >Robbie Solis-Stevenson</p>
@@ -57,9 +60,9 @@ export default function Sidebar({
 
       <div className="sidebar__foot">
         <img alt="logo" className="sidebar__foot-logo" src={GeneralLogo} />
-        <div className="sidebar__foot-log">
-          <a className="sidebar__foot-logout">Log Out</a>
-        </div>
+          <div className="sidebar__foot-log">
+              <a className="sidebar__foot-logout">Log Out</a>
+          </div>
          
       </div>
       {children}

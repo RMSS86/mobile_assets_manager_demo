@@ -3,7 +3,7 @@
 import GeneralLogo from "../assets/branding/logo/avatar2.png";
 import MotherTechLogo from '../assets/branding/logo/general-logo.png';
 // ///////USERS
-import User from "/public/media/avatar.jpg";
+import User from "/media/avatar.jpg";
 import userLogo from "../assets/avatars/user.png";
 // const DefaultUserLogo = "http://localhost/img/users/default.png";
 // const _defaultTourDir = "http://localhost/img/tours/";
