@@ -117,6 +117,7 @@ Though originally intended for prototype and demo porpuses, at time this porduct
 
 So this was the perfect moment to give this KivyMD a try and the result exceeded expectations, there are some inconveninces such a the implementation of the buildozer page that required either wsl2 integration for linux distribution or a Virtual machine in order to compile the .aapk file, that in Flutter is no deal.
 
+Here a demosntration of a ```useLogOut.tsx``` custom hook for loggin user out, notifies user using UI uses other custom hooks, ensures coocki data or user related data previously writen to local storage gets erased and moves user to home page after showing a notification via modal.
 ```typescript
 //> LOGOUT CUSTOM HOOK
 export const useLogOut = async (
@@ -157,14 +158,56 @@ export const useLogOut = async (
 };
 
 ```
+For this project and as a personal preference I utilize ```SASS``` for styling much of the times over ```tailwind``` which is a great option too, and here some ```SCSS``` code that demostrates the creation of custom ```@mixins``` that accepts inputs making a generic styling function.
 
-Here a demosntration of a ```useLogOut.tsx``` custom hook for loggin user out, notifies user using UI uses other custom hooks, ensures coocki data or user related data previously writen to local storage gets erased and moves user to home page after showing a notification via modal.
+```scss
+@mixin section_base(
+  //> set double on wrapper
+  $height: 50.7vh,
+  $width: 100%,
+  $media-query: "tab-land",
+  $borderRadius: vars.$section-border-radius,
+  $bgColor: themeColors.$colors-sections-base
+) {
+  background-color: $bgColor;
+  height: $height;
+  width: $width;
+  border-radius: $borderRadius;
 
+  @include mixins.respond($media-query) {
+    height: calc((#{$height} * 2));
+  }
+}
 
-> Check out the to-client rough demo presentation in canvas
-![alt text](frontend/public/media/presentation_ref.png)
-https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-***(presentantion in page #3)***
+@mixin section_wrapper(
+  //> on media Query sets double of bases vh
+  $height: 95%,
+  $width: 98.5%,
+  $margin: 1.6rem,
+  $display: flex,
+  $flexDirection: row,
+  $padding: 0.06rem,
+  $media-query: "tab-land",
+  $shadox: themeColors.$colors-section-wrapper-shadow,
+  $borderRadius: vars.$section-border-radius,
+  $bgColor: themeColors.$colors-sections-base
+) {
+  background-color: themeColors.$colors-section-wrapper;
+  border-radius: $borderRadius;
+  height: $height;
+  margin: $margin;
+  width: $width;
+  display: $display;
+  flex-direction: $flexDirection;
+  padding: $padding;
+  box-shadow: 0 0 2.1rem 0.6rem themeColors.$colors-section-wrapper-shadow;
+
+  @include mixins.respond($media-query) {
+    flex-direction: column;
+  }
+}
+```
+Then simply invoke the functions inside your target ```.scss``` class in form of ```@include [name_of_class].section_wrapper([inputs_if_needed]);``` simple as that, you can re-use entire layOut styles, element styles, and even animations, though you may like to use something like the amazing react library ```motion.framer```, for simple animation / UI element transitions ```scss``` still makes a great job.
 
 > All assets were designed and created in
 ![alt text](frontend/public/media/logo_and_letters.png)
@@ -175,6 +218,10 @@ https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content
 
 </p>
 
+> Check out the to-client rough demo presentation in canvas
+![alt text](frontend/public/media/presentation_ref.png)
+https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+***(presentantion in page #3)***
 
 
 

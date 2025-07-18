@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 const _contextType = "aside";
 
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-/////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function Sidebar({
   _componentProps,
   children,
@@ -14,9 +13,7 @@ export default function Sidebar({
   ...rest
 }: _props) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
-  ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
 
-  ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
     <_contextType
