@@ -1,0 +1,31 @@
+@use '../../../../../sass/layout/layout-elements';
+
+.card{
+    @include layout-elements.card_product($pad:0,$bg:#fff);
+    &_header{
+        
+    }
+    &_img{
+    border-radius: 12px;
+    width: 95%;
+    height: auto;
+    margin-top: 1rem;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+
+    }
+    &_title{
+        margin-top: 0.5rem;
+        color: rgb(52, 50, 50);
+        font-size: 1.8rem;
+
+    }
+
+    &_desc{
+        margin: 1rem 3rem 2rem 3rem;
+        color: #212020cc;
+
+    }
+
+}
+
+       

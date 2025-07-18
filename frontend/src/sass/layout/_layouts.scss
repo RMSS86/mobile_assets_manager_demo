@@ -2,9 +2,10 @@
 @use "../libs/mixins";
 @use "../libs/vars";
 
-// FIXME: make dynamic mixins for all recurrent layouts>> sections>> headers etc
-
-//> HEADERS
+//> GENERAL CONTEN PADDINGS
+@mixin dynamic_Padding($min:50%, $min_val:4%){
+  padding: min($min, $min_val);
+}
 
 //////FLEXED SECTIONS////FLEXED SECTIONS////FLEXED SECTIONS////FLEXED SECTIONS///////
 //////FLEXED SECTIONS////FLEXED SECTIONS////FLEXED SECTIONS////FLEXED SECTIONS///////

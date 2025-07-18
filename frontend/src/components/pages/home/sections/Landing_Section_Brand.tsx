@@ -26,7 +26,7 @@ export default function Landing_section_brand({
       onClick={_onClick}
       style={_style}
     >
-
+ 
         <section className='landing__wrapper'>
           <div className='landing__wrapper-wrap'>
             <div className='landing__wrapper-flex'>

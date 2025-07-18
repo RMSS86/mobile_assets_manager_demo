@@ -4,16 +4,32 @@
 @use '../base/themeColors';
 @use '../libs/vars';
 
+
 @mixin grid_general(
-  $min_val:300px,
+  $min_val:240px,
   $max_val:1fr,
   $fit:auto-fit,
-  ){
-  display: grid; //> GENERAL GRID DISPLAY
-  //border: 1px solid themeColors.$color-inverse-primary-dark;
-  grid-template-columns: repeat($fit, minmax($min_val, $max_val));
-  gap: vars.$grid-gap-simple;
-  justify-content: center;
+  $gap: 0.60rem,
+  $border_rad: 12px,
+  $content_just: center,
+  $border: false,
+  $border_w:2.4px,
+){
+        display: grid;
+        border-radius: $border;
+        @if $border {
+          border: $border_w solid burlywood;
+        }
+        //> ADJUST ATOMATICALLY THE WITDH TO FIT SCREEN
+        // grid-template-columns: repeat(4, 1fr);
+        //> ADJUST COLS ON FIXED WITDH  
+        // grid-template-columns: repeat(auto-fit, 300px);
+        // GETS AUTO FIT ON MINIMUM INITIAL WIDTH VAL TO MAX POSSIBLE
+        grid-template-columns: repeat($fit, minmax($min_val, $max_val));
+
+
+        gap: $gap; //> isntead of margin
+        justify-content: $content_just;
 }
 
 @mixin grid_body(

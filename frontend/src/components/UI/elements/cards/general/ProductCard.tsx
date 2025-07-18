@@ -1,13 +1,17 @@
-// import React, { useEffect, useRef, useState } from "react";
+     // import React, { useEffect, useRef, useState } from "react";
 
 const ContextType = "section";
 const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function HeaderSideButton({
+export default function ProductCard({
   children,
-  _className='side_btn nav_fix',
+  _className='card',
   _id = ContextId,
+  _children_mode=false,
+  _img,
+  _desc,
+  _title,
   _style,
   _onClick,
   _onCompClick,
@@ -23,12 +27,24 @@ export default function HeaderSideButton({
       {...rest}
       id={_id}
       className={_className}
-    //   onClick={_onClick}
+      onClick={_onClick}
       style={_style}
-    >
-        <img alt='logo' src={GeneralLogo} className='side_btn__logo' onClick={_onClick}/>
-        <a className='side_btn__text'>e-AM</a>
-      {children}
+    > 
+        { _children_mode ? children : 
+
+            <> 
+
+                <div className='card_header'>
+                    <img alt='product' className='card_img' src={_img} />
+                    {/* ///QR CODE ICON HERE/// */}
+                </div>
+                    <h2 className='card_title'>{_title}</h2>
+                    <p className='card_desc'>{_desc}</p>
+
+            </>
+            
+        }
+      
     </ContextType>
   );
 }
@@ -40,13 +56,17 @@ type _defaultProps = {
   _id?: string;
   _className?: string;
   _style?: React.CSSProperties;
+
+    _children_mode?: false;
+    _img?: string;
+    _desc?: string;
+    _title?: string;
+
   _onClick?: () => void;
   _onCompClick?: () => void;
 };
 
-
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './HeaderSideButton.scss'; //@ts-ignore
-import {GeneralLogo,User,userLogo} from '../../../utility/assetsImport.js';
+import './ProductCard.scss';

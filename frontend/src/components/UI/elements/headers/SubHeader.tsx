@@ -1,9 +1,11 @@
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function PageTemplate({
+export default function SubHeader({
   _componentProps,
   children,
-  _className,
+  _className='sub-header',
+  _logo_tag,
+  _page_tag,
   _style,
   _onClick,
   ...rest
@@ -16,7 +18,15 @@ export default function PageTemplate({
   return (
     <>
       <_contextType {...rest} className={_className} onClick={_onClick} style={{}}>
-        {children}
+        {/* {children} */}
+        
+            <div className='sub-header_logo'>
+                <li>{_logo_tag}</li>
+            </div>
+            <div className='sub-header_logo'>
+                <li>{_page_tag}</li>
+            </div>
+     
       </_contextType>
     </>
   );
@@ -32,6 +42,8 @@ type _defaultProps = {
   };
   children?: React.ReactNode;
   _className?: string;
+  _logo_tag?: string;
+  _page_tag?: string;
   _style?: React.CSSProperties;
   _onClick?: () => void;
 };
@@ -52,4 +64,5 @@ type _altProps = {
 
 //@ts-ignore
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query"; //@ts-ignore
+import './SubHeader.scss';

@@ -1,16 +1,22 @@
 .btn {
-    background-color: #222633e5;
+    background-color: #222633c5;
     color: #fff;
     height: 4.5rem;
-    width: 21rem;
-    position: absolute;
+    width: 15rem;
+    /* position: fixed; */
     border-radius: 1rem;
     text-align: center;
     text-decoration: none;
     flex-wrap: wrap;
-   
     font-size: 1.8rem;
-    bottom: 0.5%;
-    left: 33%;
+    left: 21%;
     box-shadow: var(--wp--preset--shadow--natural);
+    padding: 1.2rem 29.6rem;
+    display: flex;
+    justify-content: center;
+    &:hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
 }
+

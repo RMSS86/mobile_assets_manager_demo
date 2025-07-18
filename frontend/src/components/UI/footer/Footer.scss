@@ -11,7 +11,7 @@
     &__nav{
         @include layout-elements.ul_cleaner();
         @include layout-elements.footer_nav();
-        margin: 2.1rem; 
+        margin: 3.3rem; 
 
     }
 
@@ -45,6 +45,6 @@
         height: 13rem;
     }
      &-credit{
-        margin-bottom: 3rem;
+        margin-bottom: 4.2rem;
     }
 }

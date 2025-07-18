@@ -52,7 +52,7 @@ export const GlobalRouterElments = createBrowserRouter(
     <>
       <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
         <Route index={true} element={<HomePage />} />
-        <Route path='items' element={<ItemsPage />} />
+        <Route path='assets' element={<ItemsPage />} />
         <Route path='track' element={<TrackPage />} />
         <Route path='qr' element={<QrPage />} />
         <Route path='login' element={<LoginPage />} />

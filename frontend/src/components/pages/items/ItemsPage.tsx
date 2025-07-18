@@ -6,7 +6,7 @@ const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function ItemsPage({
   children,
-  _className,
+  _className='products',
   _id = ContextId,
   _style,
   _onClick,
@@ -26,8 +26,21 @@ export default function ItemsPage({
       onClick={_onClick}
       style={_style}
     >
-      {children}
-      <p>[ITEMS_PAGE]</p>
+      {/* {children} */}
+
+    <SubHeader _logo_tag='e-AM' _page_tag='Manage Assets' />
+
+
+    <div className='products_grid'>
+      <ProductCard _img={BG_img_one} _title='Product Test A' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+      <ProductCard _img={BG_img_one} _title='Product Test B' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+      <ProductCard _img={BG_img_one} _title='Product Test C' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+      <ProductCard _img={BG_img_one} _title='Product Test D' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+      <ProductCard _img={BG_img_one} _title='Product Test E' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+      <ProductCard _img={BG_img_one} _title='Product Test F' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+      <ProductCard _img={BG_img_one} _title='Product Test G' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
+
+    </div>
 
     </ContextType>
   );
@@ -44,7 +57,10 @@ type _defaultProps = {
   _onCompClick?: () => void;
 };
 
+import ProductCard from '../../UI/elements/cards/general/ProductCard';
+import SubHeader from '../../UI/elements/headers/SubHeader';
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './ItemsPage.scss';
+import './ItemsPage.scss'; //@ts-ignore
+import {BG_img_one} from '../../../utility/assetsImport.js';

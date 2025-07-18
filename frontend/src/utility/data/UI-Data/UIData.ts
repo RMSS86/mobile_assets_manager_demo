@@ -1,6 +1,6 @@
 const HEADER_DATA: _menuFeature[] = [
   { id: 0, menu: "Home", direct: "/" },
-  { id: 1, menu: "Items", direct: "items" },
+  { id: 1, menu: "Assets", direct: "assets" },
   { id: 2, menu: "Track", direct: "track" },
   { id: 3, menu: "QR", direct: "qr" },
 ];
