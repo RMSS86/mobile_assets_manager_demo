@@ -6,11 +6,11 @@ const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function Landing_section_product({
   children,
-  _className,
+  _className='branding',
   _id = ContextId,
   _style,
   _onClick,
-  _onCompClick,
+  _onCompClick, 
   ...rest
 }: _defaultProps) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
@@ -28,16 +28,46 @@ export default function Landing_section_product({
     >
 
         <section className='product'>
-            
-            <img className='product-image' src={Branding_big_one}/>
+    
             <img className='product-image' src={Branding_big_two}/>
+                <div className='product__wrapper'>
+              
+                        <Paragragh_landing 
+                            _title=''
+                            _black_letter={true}
+                            _desc='Based on a QR technology the app itself is 
+                            able to generate on the go new labels, assign / Unassign, delete and manage 
+                            multiple assets, and even create new categories, and for the sake o mobility
+                            we decided to develope an app that could run seamlessly even without a rigid 
+                            CRM like web page' />
+
+            <img className='product-logo' src={MotherTechLogo}/>
+                 
+                </div>
 
         </section>
 
-        <section className='icons'>
-            <Paragragh_landing 
-                _desc='Welcome to the interacti' />
+        <section className='product'>
+                <div className='product__wrapper'>
+                    <img className='product-logoL' src={MotherTechLogo}/>
+
+                        <Paragragh_landing 
+                            _title=''
+                            _black_letter={true}
+                            _desc='Using a pythons veratile librarire and framworks, was integrated to the app
+                            two key functionalities for tracking assets, real time, with help of gps powered hardware
+                            arduino like programable with simple C++ code(code not inlcuded in repo). along with the possibility
+                            of remembering the last location of an asset versus the new, making a simple linear regression with
+                            tensorflows powerrful neurunal networks in order to detect an anomalous move, and alerting owner of rental assets.' />
+              
+                 
+                </div>
+
+            <img className='product-image' src={Branding_big_one}/>
+
+
         </section>
+
     
       {children}
     </ContextType>

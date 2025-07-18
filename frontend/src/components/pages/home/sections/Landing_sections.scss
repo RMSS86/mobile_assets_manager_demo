@@ -53,7 +53,7 @@
         }
         &-credit{
             width: 3rem;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: white;
         }
     }
@@ -80,15 +80,49 @@
             margin: 1rem;
             display: flex;
             width: 100%;
+            //box-shadow: 0.1px 1px 7px  rgba(34, 38, 51, 0.8392156863);
 
     }
+    &-logo{
+        height: 7.2rem;
+        margin-left: 3rem;
+        
+    }
+    &-logoL{
+        height: 7.2rem;
+        margin-right: 3rem;
+    }
+    &__wrapper{
+        display: flex;
+        position: relative;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        justify-content: center;
+        align-items: center;
+ 
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            max-width: 64rem;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            z-index:10;
+            position: relative;
+    }
+}
+
+.branding{
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    margin-bottom: 3rem;
+    margin: 0.5rem;
+    //box-shadow: 1px 1px 7px 0px rgba(34, 38, 51, 0.8392156863);
+    box-shadow: inset 1px 1px 7px 0px rgba(34, 38, 51, 0.8392156863);
 }
 
 .icons{
     &-icon{
             width: 50%;
     box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
-
-
     }
 }

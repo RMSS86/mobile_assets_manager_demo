@@ -30,14 +30,17 @@ This application uses QR based tecnology in order to create catalogs over a simp
   </a>
 </p>
 
+
 > Some from the React.js / SASS Front_end UI
 ![alt text](frontend/public/media/landing_page_One.png)
+![alt text](frontend/public/media/side_nav_bar.png)
+![alt text](frontend/public/media/branding_page_one.png)
+
 
 > Dedicated Media
 <kbd>
 
 ![alt text](frontend/public/media/branding_two.png)
-
 ![alt text](frontend/public/media/branding_one.png)
 
 
@@ -130,6 +133,14 @@ https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content
 ***(presentantion in page #3)***
 
 
+![alt text](frontend/public/media/logo_and_letters.png)
+
+
+<p align='center'>
+
+  [![python](https://img.shields.io/badge/Docker-Container-3776AB.svg?style=plastic&logo=python)](https://docker.com)
+</p>
+
 > All assets were designed and created in
 <p align='center'>
   <img src="https://img.shields.io/badge/Adobe%20Illustrator-FF9A00?style=for-the-badge&logo=adobe%20illustrator&logoColor=white" />
@@ -137,9 +148,3 @@ https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content
 
 </p>
 
-
-<!-- <p align="center">
-  
-  [![docker](https://img.shields.io/badge/kubernetes-network-326CE5.svg?style=for-the-badge&logo=kubernetes)](https://docker.com)
-  
-</p> -->

@@ -12,4 +12,16 @@ import userLogo from "../assets/avatars/user.png";
 import Branding_big_one from "/media/branding_one.png";
 import Branding_big_two from "/media/branding_two.png";
 
-export { GeneralLogo,User,userLogo,Branding_big_one,Branding_big_two,MotherTechLogo };
+//////////////PEXELS ASSETS
+import BG_img_one from '/media/pexels-winson5293-2701434.jpg';
+import Actor_male_image_one from '/media/pexels-tima-miroshnichenko-6169634.jpg';
+
+export { 
+    GeneralLogo,
+    User,
+    userLogo,
+    Branding_big_one,
+    Branding_big_two,
+    MotherTechLogo,
+    BG_img_one,
+    Actor_male_image_one };

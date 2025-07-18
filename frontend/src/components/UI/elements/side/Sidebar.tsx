@@ -27,11 +27,20 @@ export default function Sidebar({
       id={_id}
     >
       <div className="sidebar__user">
-       <div className="sidebar__user-wrap">
+       <div className="sidebar__user-wrap" 
+            style={{
+            background: `url(${BG_img_one}) no-repeat`,
+            backgroundSize: "cover", 
+            backgroundPosition: "center",
+          }}>
          <img alt="user" className="sidebar__user-photo" src={User} />
-        <p className="sidebar__user-tag">Robbie</p>
+         <div className="sidebar__user-tagbg">
+            <p className="sidebar__user-tag">Robbie</p>
+         </div>
+        
        </div>
       </div>
+
       <ul className="sidebar__options">
             {HEADER_DATA.map((e) => (
         <Links
@@ -44,6 +53,11 @@ export default function Sidebar({
         />
       ))}
       </ul>
+         <div className="sidebar-footer">
+            <img className="sidebar-foot" alt="personal" src={MotherTechLogo} />
+            <p className="sidebar-credit" >Robbie Solis-Stevenson</p>
+          </div>
+
       <div className="sidebar__foot">
         <img alt="logo" className="sidebar__foot-logo" src={GeneralLogo} />
         <div className="sidebar__foot-log">
@@ -86,5 +100,8 @@ type _altProps = {
 // @ts-ignore
 import "./Sidebar.scss"; // @ts-ignore
 import {GeneralLogo, User} from "../../../../utility/assetsImport.js";
-import { HEADER_DATA } from "../../../../utility/data/UI-Data/UIData.js";import Links from "../links/Links.js";
+import { HEADER_DATA } from "../../../../utility/data/UI-Data/UIData.js";
+import Links from "../links/Links.js";
+import {BG_img_one, // @ts-ignore
+    Actor_male_image_one,MotherTechLogo} from '../../../../utility/assetsImport.js';
 

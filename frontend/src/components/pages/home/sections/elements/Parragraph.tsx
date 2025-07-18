@@ -8,6 +8,7 @@ export default function Paragragh_landing({
   children,
   _className = "paragragh",
   _stack = false,
+  _black_letter=false,
   _title,
   _desc,
   _id = ContextId,
@@ -32,7 +33,7 @@ export default function Paragragh_landing({
       <div className="paragragh__wrapper">
         <div className="paragragh__wrapper-col">
           <h1 className="paragragh__title">{_title}</h1>
-          <p className="paragragh__desc">{_desc} </p>
+          <p className={_black_letter ? "paragragh__desc clr_black" : "paragragh__desc"}>{_desc} </p>
         </div>
       </div>
       {_stack && (
@@ -64,6 +65,7 @@ type _defaultProps = {
   _title?: string;
   _stack?: boolean;
   _desc?: string;
+  _black_letter?: boolean;
   _style?: React.CSSProperties;
   _onClick?: () => void;
   _onCompClick?: () => void;
@@ -72,5 +74,5 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import "./Section_elements.scss";
+import "./Section_elements.scss"; //@ts-ignore
 import {MotherTechLogo} from '../../../../../utility/assetsImport.js';
