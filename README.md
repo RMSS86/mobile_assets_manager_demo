@@ -1,4 +1,4 @@
-# mobile_assets_manager_demo
+# easy_assets_manager_demo
 
 <p align="center">
   
@@ -38,14 +38,8 @@ This application uses QR based tecnology in order to create catalogs over a simp
 
 
 > Dedicated Media
-<kbd>
-
 ![alt text](frontend/public/media/branding_two.png)
 ![alt text](frontend/public/media/branding_one.png)
-
-
-</kbd>
-
 
 
 The following ```SQL``` Query demostrates the way the simple ```node.js``` backend serves and replies to the userinterface once the QRCode is scanned from the KivyMD textured interface, returning an object that ```pandas``` and ```SQLAlchemy``` libraries then parses and digest into the mobile ```UI```.
@@ -101,7 +95,6 @@ Where each cathegory is parsed manually, though it's not the best practices, it 
 # //> Initial SQL request manager
 def SQL_Main_request(self):
     #//> GENERIC SQL REQUEST :: SPx FOR All Info from Scanner requests! ...
-
     self._return_code = pd.read_sql_query(
         f'exec ixSP_Read_QR {self._c_getter}',
         self._Conection())
@@ -114,7 +107,6 @@ def SQL_Main_request(self):
     self.menu.ids.list_sub_category.text = self._return_code['Sub_Category_DSC'][0]  # //< Tag from Category from
     self.menu.ids.list_item_dsc.text = self._return_code['Item_DSC'][0]  # //< Tag from sub_Category from
     self.menu.ids.list_item_cycle_dsc.text = self._return_code['Item_DSC'][0]
-
     self.Current_Item_ID = self._return_code['Item_ID'][0]
 
     return self._return_code # //< RAW QUERY OBJECT RETURN
@@ -126,25 +118,19 @@ Though originally intended for prototype and demo porpuses, at time this porduct
 So this was the perfect moment to give this KivyMD a try and the result exceeded expectations, there are some inconveninces such a the implementation of the buildozer page that required either wsl2 integration for linux distribution or a Virtual machine in order to compile the .aapk file, that in Flutter is no deal.
 
 > Check out the to-client rough demo presentation in canvas
-
 ![alt text](frontend/public/media/presentation_ref.png)
 https://www.canva.com/design/DAFz0FiCz-g/-DrBIo2e3CUPbdlYm3dzqw/edit?utm_content=DAFz0FiCz-g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
 ***(presentantion in page #3)***
 
-
+> All assets were designed and created in
 ![alt text](frontend/public/media/logo_and_letters.png)
 
-
-<p align='center'>
-
-  [![python](https://img.shields.io/badge/Docker-Container-3776AB.svg?style=plastic&logo=python)](https://docker.com)
-</p>
-
-> All assets were designed and created in
 <p align='center'>
   <img src="https://img.shields.io/badge/Adobe%20Illustrator-FF9A00?style=for-the-badge&logo=adobe%20illustrator&logoColor=white" />
   <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white" />
 
 </p>
+
+
+
 
