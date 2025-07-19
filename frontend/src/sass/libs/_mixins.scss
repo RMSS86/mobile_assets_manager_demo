@@ -10,6 +10,11 @@
 //////////////////////////RESPONSIVENESS MIXINS
 ///////////////////////////////////////////////
 @mixin respond($breakpoint) {
+    @if $breakpoint == phone-xsmall {
+    @media only screen and (max-width: 20em) {
+      @content;
+    } //> 320px
+  }
   @if $breakpoint == phone-small {
     @media only screen and (max-width: 27em) {
       @content;

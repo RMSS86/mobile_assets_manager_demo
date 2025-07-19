@@ -15,10 +15,10 @@ export default function TopNavigator({
   //@ts-ignore
   const { globalUser, setGlobalUser } = useUserContext();
   console.log("From Top Navigator: ", globalUser);
-
   ////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////
   ////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////
   let _navigate = useNavigate();
+  const _sidebar = document.getElementById('sidebar');
 
   ////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////
   ////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////
@@ -68,12 +68,12 @@ export default function TopNavigator({
     }
   };
 
-  const _sidebar = document.getElementById('sidebar');
+  
 
   function toggleSidebar(){
     _sidebar?.classList.toggle('show');
     console.log('clicked!');
-  }
+  } 
 
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
@@ -91,7 +91,7 @@ export default function TopNavigator({
 
       <ContextType
         {...rest}
-        className="top-nav nav"
+        className="top-nav"
         onClick={_onClick}
         style={_style}
       >

@@ -47,6 +47,10 @@ export default function Landing_section_product({
 
         </section>
 
+         <section className='product__middle'>
+            <img src={QR_Scan_me} className='product__middle-img' alt='qrscan'></img>
+         </section> 
+
         <section className='product'>
                 <div className='product__wrapper'>
                     <img className='product-logoL' src={MotherTechLogo}/>
@@ -89,5 +93,5 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
 import './Landing_sections.scss'; //@ts-ignore
-import {GeneralLogo, Branding_big_one, Branding_big_two,MotherTechLogo} from '../../../../utility/assetsimport.js';
+import {GeneralLogo, Branding_big_one, Branding_big_two,MotherTechLogo,QR_Scan_me} from '../../../../utility/assetsimport.js';
 import Paragragh_landing from './elements/Parragraph.js';

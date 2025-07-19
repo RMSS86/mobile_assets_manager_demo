@@ -5,6 +5,10 @@
 @use '../libs/vars';
 
 
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $min_val Gets minimum element width.
+/// @param {string} $max_val Optional sets the else width.
+/// @param {auto-fit} $fit how many elements will fit in place.
 @mixin grid_general(
   $min_val:240px,
   $max_val:1fr,

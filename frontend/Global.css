@@ -29,6 +29,7 @@
 aside{
   height: 85vh;
   top: 58px;
+  /* left: -100%; */
   position: fixed;
   align-self: start;
   transition: all 1s ease-in-out;
@@ -51,3 +52,12 @@ aside{
 
 }
 
+
+#sidebar-active:checked ~ aside {
+    opacity:0;
+    left: 0;
+    position: fixed;
+    transform: translateX(-72%);
+    transition: all 0.5s ease-in-out;
+    transition-behavior: allow-discrete;
+}

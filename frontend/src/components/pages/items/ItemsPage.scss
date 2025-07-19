@@ -1,14 +1,21 @@
+@use '../../../sass/libs/mixins';
 @use '../../../sass/layout/layouts';
 @use '../../../sass/layout/grid';
 
 
-
-.products{
+.products{ 
     @include layouts.dynamic_Padding($min_val:1.8%);
 
     &_grid{
         @include grid.grid_general($min_val:240px,$gap:1.2rem);
         margin-bottom: 3rem;
+            //> FOR ELEMENTS TO FIT IN SCREEN
+            @include mixins.respond(phone-large){
+                 @include grid.grid_general($min_val:225px,$gap:1.2rem);
+            }
+            @include mixins.respond(phone-small){
+                 @include grid.grid_general($min_val:198px,$gap:1.2rem);
+            }
 
         &-card{
             padding: 2rem;
@@ -16,7 +23,6 @@
             border-radius: 12px;
             background-color: #424242;
             text-align: center;
-            // margin: 0.30rem;
             color: #fff;
             height: fit-content;
         }

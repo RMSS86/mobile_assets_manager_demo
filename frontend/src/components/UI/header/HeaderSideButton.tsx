@@ -6,7 +6,7 @@ const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function HeaderSideButton({
   children,
-  _className='side_btn nav_fix',
+  _className='side_btn',
   _id = ContextId,
   _style,
   _onClick,
@@ -30,10 +30,10 @@ export default function HeaderSideButton({
         
 
         {/* ///CHECK BOX LOGIC/// */}
-        <input type='checkbox' id='sidebar-active'/>
+        {/* <input type='checkbox' id='sidebar-active'/>
         <label htmlFor='sidebar-active'>
           <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>  
-        </label>
+        </label> */}
         
         <a className='side_btn__text'>e-AM</a>
       {children}

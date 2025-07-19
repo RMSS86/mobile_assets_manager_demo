@@ -1,16 +1,23 @@
+@use '../../../../sass/libs/mixins';
+
 .sub-header {
     margin-bottom: 1.2rem;
     color: #fff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 3px 30px; // ori > 15px 30px; [ for mobile  ]
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    box-shadow: 0 4px 20px #25252525;
     border-radius:12px; 
     position: relative;
     z-index: 10;
     flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px #25252525;
+    padding: 3px 30px; 
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    transition: all 1s;
+    //> CHANGES SIZE OF ELEMENT ori > 15px 30px; [ for mobile  ]
+    @include mixins.respond(phone-large){
+    padding: 15px 30px;
+    }
 
     &_logo {
         margin: 8px;

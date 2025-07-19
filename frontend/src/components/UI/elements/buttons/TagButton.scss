@@ -1,9 +1,11 @@
+@use '../../../../sass/libs/mixins';
+
 .btn {
-    background-color: #222633c5;
+    background-color: #000000ab; // #222633c5;
     color: #fff;
     height: 4.5rem;
     width: 15rem;
-    /* position: fixed; */
+    margin-top: 1rem;
     border-radius: 1rem;
     text-align: center;
     text-decoration: none;
@@ -14,9 +16,23 @@
     padding: 1.2rem 29.6rem;
     display: flex;
     justify-content: center;
+    transition: all 1s;
+    @include mixins.respond(tab-port){
+        width: 60rem;
+        padding: 1.2rem;
+    } 
+    @include mixins.respond(phone){
+        width: 45rem;
+        padding: 1.2rem;
+    }
+        @include mixins.respond(phone){
+              width: 19rem; 
+
+            }
+
     &:hover{
+        background-color: #1974D2;
         transform: scale(1.1);
-        transition: all 1s;
     }
 }
 

@@ -1,4 +1,5 @@
 @use '../../../../sass/layout/grid';
+@use  '../../../../sass/libs/mixins';
 @use '../../../../sass/layout/layout-elements';
 
 .landing{
@@ -6,7 +7,7 @@
         display: flex;
         position: relative;
 
-        padding-top: 6rem;
+        padding-top: 4.2rem;
         padding-bottom: 6rem;
         justify-content: center;
         align-items: center;
@@ -28,7 +29,24 @@
             margin-right: auto;
             z-index:10;
             position: relative;
+            transition: all 1s ease;
 
+            //> changes lay out position
+            @include mixins.respond(phone-xsmall){
+                max-width: 39rem;
+                width: 68%;
+            }
+
+            //> changes lay out position
+            @include mixins.respond(phone-small){
+                max-width: 40rem;
+                width: 68%;
+            }
+            //> changes lay out position
+            @include mixins.respond(phone){
+                max-width: 40rem;
+                width: 100%;
+            }
         }
         &-flex{
             display: grid;
@@ -36,6 +54,13 @@
             grid-template-columns: 1fr auto;
             justify-content: center;
             align-items: center;
+            transition: all 1s ease-in-out;
+
+            //> changes lay out position
+            @include mixins.respond(tab-port){
+                grid-template-columns: 1fr;
+            }
+
         }
         &-footer{
             display: flex;
@@ -63,6 +88,13 @@
             max-height: 66%;
             border-radius: 12px;
             box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+                    //> changes lay out position
+            @include mixins.respond(phone){
+                width: 100%; 
+            }
+            @include mixins.respond(phone-small){
+                width: 100%; 
+            }
         }
 
     }
@@ -75,6 +107,13 @@
     grid-template-columns: repeat(2,1fr);
     gap: 1.4rem;
 
+    //> changes lay out position to [ COLUMN ]
+    @include mixins.respond(tab-port){
+    grid-template-columns: repeat(1,1fr);
+        
+    }
+
+
     &-image{
         border-radius: 12px;
             margin: 1rem;
@@ -86,6 +125,11 @@
     &-logo{
         height: 7.2rem;
         margin-left: 3rem;
+        //> changes lay out position
+        @include mixins.respond(tab-port){
+        margin-right: 3rem;
+        margin-left: 0;
+        }
         
     }
     &-logoL{
@@ -108,6 +152,19 @@
             margin-right: auto;
             z-index:10;
             position: relative;
+
+            @include mixins.respond(tab-port){
+                padding-top: 0rem;
+                padding-bottom: 1rem;
+            }
+    }
+    &__middle{
+        &-img{
+            height: 19rem;
+            padding-left: 42%;
+            padding-right: 50%;
+            margin: 6rem 0;
+        }
     }
 }
 
@@ -135,3 +192,6 @@
 }
 
 
+.order_swap{
+    order: 2;
+}

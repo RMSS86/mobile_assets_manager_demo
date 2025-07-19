@@ -1,10 +1,11 @@
 @use '../../../sass/base/themeColors';
 
 .side_btn {
-    background-color: #222633;
+    background-color:#000000ab; //#222633;
     border-radius: 12px;
     flex-direction: row;
     display: flex;
+    position: sticky;
     font-size: 1.8rem;
     box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
         transition: all 1s ease-in-out;
@@ -38,4 +39,14 @@
 
 #sidebar-active{
     display: none;
+}
+
+#sidebar-active:checked ~ .sidebar {
+    display: block;
+    opacity:0;
+    left: 0;
+    position: fixed;
+    transform: translateX(-72%);
+    transition: all 0.5s ease-in-out;
+    transition-behavior: allow-discrete;
 }

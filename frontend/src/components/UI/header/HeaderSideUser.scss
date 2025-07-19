@@ -1,6 +1,7 @@
+@use '../../../sass/libs/mixins';
 
 .sider_btn {
-background-color: #222633;
+background-color: #000000ab;// #222633;
 border-radius: 12px;
 flex-direction: row;
 display: flex;
@@ -8,17 +9,21 @@ font-size: 1.8rem;
 box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
  transition: all 1s;
 &:hover{
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #ff7f5fdc, #fdb074db);
 }
 
 &__tag{
     color: #ffffffd5;
-    padding: 2.3rem 0.5rem 1rem 2rem;
+    padding: 2.3rem 1.2rem 1rem 2rem;
     transition: all 1s;
     &:hover{
         color: #fff;
         transform: scale(1.1);
-        
+    }
+
+    //> CHANGES SIZE OF ELEMENT
+    @include mixins.respond(phone-large){
+    padding: 2.3rem 0.5rem 1rem 9rem;
     }
 }
 

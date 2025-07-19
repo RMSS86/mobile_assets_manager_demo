@@ -15,7 +15,6 @@
     text-align: center;   
     z-index: 11;
     
-
     &__user{
         padding: 1rem;
         border-radius: 12px 12px 24px 24px;
@@ -67,6 +66,7 @@
             height: 8.1rem;
             margin-right: 1rem;
         }
+
         &-credit{
             width: 3rem;
             font-size: 1.2rem;
@@ -93,6 +93,13 @@
             background-color: #000000aa;
             padding: 1rem 2rem;
             border-radius: 8px;
+            transition: all 1s;
+            
+            &:hover{
+                background-color: #1974D2;
+                transform: scale(1.1);
+                
+            }
         }   
     }
 
@@ -117,6 +124,12 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            transition: all 1s;
+
+            &:hover{
+                background-color: #f66b67;
+                
+            }
             &-logout{
             }
            

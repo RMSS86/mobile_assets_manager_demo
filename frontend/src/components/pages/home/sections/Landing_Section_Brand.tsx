@@ -29,15 +29,17 @@ export default function Landing_section_brand({
  
         <section className='landing__wrapper'>
           <div className='landing__wrapper-wrap'>
-            <div className='landing__wrapper-flex'>
+            <div className='landing__wrapper-flex'> 
                 <Paragragh_landing 
                 _stack={true}
                 _title='Easy Assets Manager' 
                 _desc='Welcome to the interactive mobil manager that resolves your inventory and assets problemas in one go
                 . This is a Prototype intended to resolve issues with our clients persistent telecomunication asstes, 
                 using an efficient QR Code powwered solution.' /> 
+                <Tilt >
+                  <img className='landing__header-logo' src={GeneralLogo}/>
+                </Tilt>
 
-                <img className='landing__header-logo' src={GeneralLogo}/>
             </div>
             <TagButton _btnText='Discover'/>
           </div>
@@ -67,7 +69,8 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './Landing_sections.scss'; //@ts-ignore
+import './Landing_sections.scss'; 
+import Tilt from 'react-parallax-tilt'; //@ts-ignore
 import {GeneralLogo, Branding_big_one, Branding_big_two} from '../../../../utility/assetsimport.js';
 import Paragragh_landing from './elements/Parragraph.js';
 import TagButton from '../../../UI/elements/buttons/TagButton.js';
