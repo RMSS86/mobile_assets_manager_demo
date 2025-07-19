@@ -29,9 +29,9 @@
 aside{
   height: 85vh;
   top: 58px;
-  position: sticky;
+  position: fixed;
   align-self: start;
-  
+  transition: all 1s ease-in-out;
 }
 
 .nav_fix {

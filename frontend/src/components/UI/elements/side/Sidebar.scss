@@ -126,10 +126,12 @@
 }
 
 .show{
-    display: none;
+    // display: none;
     opacity:0;
+    left: 0;
+    position: fixed;
     transform: translateX(-72%);
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
     transition-behavior: allow-discrete;
 
 }
