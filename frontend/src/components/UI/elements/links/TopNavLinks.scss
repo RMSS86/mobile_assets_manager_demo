@@ -7,28 +7,42 @@
   
   &__links {
     @include layout-elements.ul_cleaner();
-    background-color: #2226339c;
-    margin: 1.5rem;
-    padding: 1rem 6rem;
-    border-radius: 12px;
-    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+    display: flex;
+    align-items: center;
+    border-radius: 9px;
   }
 
   &__link {
     @include layout-elements.a_cleaner();
     color: themeColors.$color-surface-light;
-     margin: 1.8rem;
+    margin: 0 1rem;
     &:hover{
-      color: themeColors.$color-complementary-negative;
-      transform: scale(1.1);
+      color:#222633ed;
       transition: all 1s;
     }
   }
 
   &__item {
     @include layout-elements.li_cleaner();
+    background-color: #222633ed;
+      box-shadow: 0px 1px 4px rgba(34, 38, 51, 0.8392156863);
+
+    padding: 2rem;
     font-size: vars.$default-link-font-size;
-    margin: 0 1rem;
+    &:first-child{
+      border-radius: 9px 0 0 9px;
+      padding-left: 5rem;
+    }
+    &:last-child{
+      border-radius:  0 9px 9px 0;
+      padding-right: 5rem;
+    }
+    &:hover{
+      background-color: #1974D2;
+      transition: all .5s ease-in-out;
+      box-shadow: inset 0px 1px 4px rgba(34, 38, 51, 0.8392156863);
+
+    }
   }
 }
 
