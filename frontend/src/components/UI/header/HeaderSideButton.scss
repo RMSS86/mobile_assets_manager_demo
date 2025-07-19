@@ -1,31 +1,37 @@
 @use '../../../sass/base/themeColors';
 
 .side_btn {
-background-color: #222633;
-border-radius: 12px;
-flex-direction: row;
-display: flex;
-font-size: 1.8rem;
-box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
-
-
-&__text{
-    color: #ffff;
-    padding: 2rem 3rem 2rem 0.5rem;
-    &:hover{
-        transform: scale(1.1);
-        transition: all 1s;
-    }
-}
-
-&__logo{
-    height: 6rem;
-    margin: 0.3rem;
-    margin-right: 1.5rem;
+    background-color: #222633;
     border-radius: 12px;
-    &:hover{
-        transform: scale(0.9);
-        transition: all 1s;
-    }
+    flex-direction: row;
+    display: flex;
+    font-size: 1.8rem;
+    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+        transition: all 1s ease-in-out;
+
+    &:hover{    
+        background-color: #1974D2;
+        box-shadow: inset 0px 1px 4px rgba(34, 38, 51, 0.8392156863);
 }
+
+    &__text{
+        color: #ffff;
+        padding: 2rem 3rem 2rem 0.5rem;
+        transition: all 1s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__logo{
+        height: 6rem;
+        margin: 0.3rem;
+        margin-right: 1.5rem;
+        border-radius: 12px;
+        &:hover{
+            transform: scale(0.9);
+            transition: all 1s;
+        }
+    }
 }

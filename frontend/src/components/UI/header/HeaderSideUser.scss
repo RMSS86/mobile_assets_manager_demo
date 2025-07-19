@@ -5,17 +5,20 @@ border-radius: 12px;
 flex-direction: row;
 display: flex;
 font-size: 1.8rem;
-
 box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+ transition: all 1s;
+&:hover{
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
 
 &__tag{
     color: #ffffffd5;
     padding: 2.3rem 0.5rem 1rem 2rem;
-    
+    transition: all 1s;
     &:hover{
         color: #fff;
         transform: scale(1.1);
-        transition: all 1s;
+        
     }
 }
 
@@ -23,6 +26,7 @@ box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
     height: 6rem;
     margin: 0.3rem;
     border-radius: 12px;
+
         &:hover{
         transform: scale(0.9);
         transition: all 1s;
