@@ -1,6 +1,8 @@
 @use '../../../sass/layout/layouts';
 @use '../../../sass/layout/grid';
 
+
+
 .products{
     @include layouts.dynamic_Padding($min_val:1.8%);
 
