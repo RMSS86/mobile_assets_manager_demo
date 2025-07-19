@@ -34,12 +34,23 @@ export default function ProductCard({
 
             <> 
 
-                <div className='card_header'>
+                <div className='card_header'> 
                     <img alt='product' className='card_img' src={_img} />
-                    {/* ///QR CODE ICON HERE/// */}
-                </div>
+                    <img alt='product' className='card_logo' src={GeneralLogo} />
                     <h2 className='card_title'>{_title}</h2>
+                    {/* ///QR CODE ICON HERE/// */}
+
+                    <div className='card_actions'>
+                    <img alt='qr_scan' className='card_actions-icon' src={Qr_scan_icon} />
+                    <img alt='qr_add' className='card_actions-icon' src={Qr_add_icon} />
+                    <img alt='fav' className='card_actions-icon' src={Fav_icon} />
+
+                        {/* Qr_scan_icon, Add_icon,Qr_add_icon */}
+                         </div> 
+                </div>
+                    
                     <p className='card_desc'>{_desc}</p>
+                    <p className='card_code'>Asset_4398457A</p>
 
             </>
             
@@ -69,4 +80,5 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './ProductCard.scss';
+import './ProductCard.scss'; //@ts-ignore
+import {GeneralLogo,Qr_scan_icon, Add_icon,Qr_add_icon,Fav_icon} from '../../../../../utility/assetsImport.js';

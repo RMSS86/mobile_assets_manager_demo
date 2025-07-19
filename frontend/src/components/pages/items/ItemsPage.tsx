@@ -30,18 +30,20 @@ export default function ItemsPage({
 
     <SubHeader _logo_tag='e-AM' _page_tag='Manage Assets' />
 
-
+    {/* ///MAP FORM DB!//*/}
     <div className='products_grid'>
-      <ProductCard _img={BG_img_one} _title='Product Test A' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-      <ProductCard _img={BG_img_one} _title='Product Test B' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-      <ProductCard _img={BG_img_one} _title='Product Test C' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-      <ProductCard _img={BG_img_one} _title='Product Test D' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-      <ProductCard _img={BG_img_one} _title='Product Test E' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-      <ProductCard _img={BG_img_one} _title='Product Test F' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-      <ProductCard _img={BG_img_one} _title='Product Test G' _desc='THIS IS A TEST FOR RESPONSIVENESS PORPUSES, PRIOR TO SET UP THE ITEMS PAGE'/>
-
+      <ProductCard _img={BG_img_one} _title='Test Product 1' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 2' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 3' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 4' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 4' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 5' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 6' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+      <ProductCard _img={BG_img_one} _title='Test Product 7' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
+    
     </div>
 
+    <Landing_section_action />
     </ContextType>
   );
 }
@@ -64,3 +66,4 @@ import SubHeader from '../../UI/elements/headers/SubHeader';
 //@ts-ignore
 import './ItemsPage.scss'; //@ts-ignore
 import {BG_img_one} from '../../../utility/assetsImport.js';
+import Landing_section_action from '../home/sections/Landing_section_action.js';
