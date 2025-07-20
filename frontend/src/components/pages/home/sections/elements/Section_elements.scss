@@ -2,18 +2,37 @@
 
 .bg_video{
     position: absolute;
-    margin-top: -10%;
-    margin-left: -1.5%; 
-    /* margin-right: -11%; */
     border-radius: 12px;
-    width: 102%;
-    height: 123vh; 
     z-index: -1;
     justify-content: center;
+
+    margin-top: -10%;
+    margin-left: -1.5%; 
+    width: 102%;
+    height: 123vh; 
+
+    // margin-top: -14%;
+    // margin-left: -1.5%;
+    // width: 109%;
+    // height: 129vh;
+
+    @include mixins.respond(phone){
+        margin-top: -25%;
+        margin-left: -34.5%;
+        width: 236%;
+        height: 114vh;
+    }
+
+    @include mixins.respond(tab-land){
+        margin-top: -17%;
+        margin-left: -1.5%;
+        width: 147%;
+        height: 122vh;
+    }
+
 }
 
 .paragragh{
-
     text-align: left;
     min-width: 20rem;
     width: 45rem;
@@ -22,6 +41,7 @@
     @include mixins.respond(tab-port){
         order: 2;
         width:100%;
+        margin-top: 18%;
     }
 
     &__wrapper {
