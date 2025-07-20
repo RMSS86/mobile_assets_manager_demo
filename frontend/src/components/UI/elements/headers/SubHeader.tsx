@@ -4,6 +4,7 @@ export default function SubHeader({
   _componentProps,
   children,
   _className='sub-header',
+  _menu,
   _logo_tag,
   _page_tag,
   _style,
@@ -23,6 +24,7 @@ export default function SubHeader({
             <div className='sub-header_logo'>
                 <li>{_logo_tag}</li>
             </div>
+            { _menu }
             <div className='sub-header_logo'>
                 <li>{_page_tag}</li>
             </div>
@@ -44,6 +46,7 @@ type _defaultProps = {
   _className?: string;
   _logo_tag?: string;
   _page_tag?: string;
+  _menu?: React.ReactNode;
   _style?: React.CSSProperties;
   _onClick?: () => void;
 };
@@ -65,4 +68,5 @@ type _altProps = {
 //@ts-ignore
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query"; //@ts-ignore
-import './SubHeader.scss';
+import './SubHeader.scss';import React from "react";
+

@@ -22,6 +22,10 @@
         scroll-margin-top: 4rem;
         min-height: calc(100vh - 4rem);
 
+        @include mixins.respond(phone){
+            padding-top: 2.2rem;
+        }
+       
         // height: 40vh;
         // @include grid.grid_general(
         //             $min_val:30%,

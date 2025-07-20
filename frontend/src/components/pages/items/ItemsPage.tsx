@@ -27,8 +27,8 @@ export default function ItemsPage({
       style={_style}
     >
       {/* {children} */}
-
-    <SubHeader _logo_tag='e-AM' _page_tag='Manage Assets' />
+    
+    <SubHeader _logo_tag='e-AM' _page_tag='Manage Assets' _menu={<HeaderFragment />}/>
 
     {/* ///MAP FORM DB!//*/}
     <div className='products_grid'>
@@ -66,4 +66,5 @@ import SubHeader from '../../UI/elements/headers/SubHeader';
 //@ts-ignore
 import './ItemsPage.scss'; //@ts-ignore
 import {BG_img_one} from '../../../utility/assetsImport.js';
-import Landing_section_action from '../home/sections/Landing_section_action.js';
+import Landing_section_action from '../home/sections/Landing_section_action.js';import HeaderFragment from '../../UI/elements/headers/HeaderFragment.js';
+

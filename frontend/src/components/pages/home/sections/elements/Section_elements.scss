@@ -6,28 +6,52 @@
     z-index: -1;
     justify-content: center;
 
-    margin-top: -10%;
-    margin-left: -1.5%; 
-    width: 102%;
-    height: 123vh; 
+    //> NORMAL INCLUES BIG_DESKTOP
+    margin-top: -15%;
+    margin-left: -26.5%;
+    width: 151%;
+    height: 136vh;
 
-    // margin-top: -14%;
-    // margin-left: -1.5%;
-    // width: 109%;
-    // height: 129vh;
+    @include mixins.respond(tab-land){
+        margin-top: -20%;
+        margin-left: -13.5%;
+        width: 175%;
+        height: 123vh;
+    }
 
-    @include mixins.respond(phone){
-        margin-top: -25%;
+    @include mixins.respond(tab-port){
+        margin-top: -22%;
+        margin-left: -10.5%;
+        width: 207%;
+        height: 123vh;
+    }
+
+    @include mixins.respond(phone-large){
+        margin-top: -21%;
         margin-left: -34.5%;
-        width: 236%;
+        width: 252%;
         height: 114vh;
     }
 
-    @include mixins.respond(tab-land){
-        margin-top: -17%;
-        margin-left: -1.5%;
-        width: 147%;
-        height: 122vh;
+    @include mixins.respond(phone){
+        margin-top: -33%;
+        margin-left: -50.5%;
+        width: 309%;
+        height: 121vh;
+    }
+
+    @include mixins.respond(phone-small){
+        margin-top: -47%;
+        margin-left: -34.5%;
+        width: 414%;
+        height: 120vh;
+    }
+
+    @include mixins.respond(phone-xsmall){
+        margin-top: -70%;
+        margin-left: -34.5%;
+        width: 371%;
+        height: 101vh;
     }
 
 }
@@ -41,7 +65,14 @@
     @include mixins.respond(tab-port){
         order: 2;
         width:100%;
-        margin-top: 18%;
+        margin-top: -3rem;
+    }
+ 
+    //> INVERTS GRID POSITION
+    @include mixins.respond(phone){
+        order: 2;
+        width:100%;
+        margin-top:-1.8rem;
     }
 
     &__wrapper {
@@ -52,7 +83,6 @@
             display: flex;
             flex-direction: column;
         }
-
     }
 
     &__title {
@@ -67,11 +97,14 @@
         margin-top: calc(1.5rem * calc(1 - var(--tw-space-reverse)));
         font-size: 1.8rem;
         color: rgb(250, 250, 250);
+        @include mixins.respond(tab-port){
+            margin-top: 1rem;
+        }
         //> changes lay out position
         @include mixins.respond(phone-xsmall){
             font-size: 1.4rem;
         }
-                @include mixins.respond(phone-small){
+        @include mixins.respond(phone-small){
             font-size: 1.5rem;
         }
     }

@@ -21,43 +21,36 @@ html {
   font-size: 62.5%;
 
   // //1 rem = 10px; 10px/16px = 62.5%
-  // @include mixins.respond(phone-small) {
-  //   // width < 1200?
-  //   font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-  // }
+ 
   @include mixins.respond(phone) {
     // width < 1200?
-    font-size: 42.24%; //1 rem = 9px, 9/16 = 50%
+    font-size: 42%; //1 rem = 9px, 9/16 = 50%
   }
-  // @include mixins.respond(phone-large) {
-  //   // width < 1200?
-  //   font-size: 50%; //1 rem = 9px, 9/16 = 50%
-  // }
   @include mixins.respond(tab-land) {
     // width < 1200?
-    font-size: 47%; //1 rem = 9px, 9/16 = 50%
+    font-size: 43.1%; //1 rem = 9px, 9/16 = 50%
   }
   @include mixins.respond(tab-port) {
     // width < 900?
-    font-size: 48%; //1 rem = 8px, 8/16 = 50%
+    font-size: 45%; //1 rem = 8px, 8/16 = 50%
   }
   @include mixins.respond(tab-land-plus) {
     // width < 900?
-    font-size: 48.25%; //1 rem = 8px, 8/16 = 50%
+    font-size: 46%; //1 rem = 8px, 8/16 = 50%
   }
   @include mixins.respond(lap-top) {
-    font-size: 49%;
+    font-size: 46.25%;
   }
   @include mixins.respond(lap-top-medium) {
     // width < 900?
-    font-size: 49.5%; //1 rem = 8px, 8/16 = 50%
+    font-size: 48.5%; //1 rem = 8px, 8/16 = 50%
   }
   @include mixins.respond(lap-top-large) {
     // width < 900?
-    font-size: 49.5%; //1 rem = 8px, 8/16 = 50%
+    font-size: 48.5%; //1 rem = 8px, 8/16 = 50%
   }
   @include mixins.respond(big-desktop) {
-    font-size: 51.25%; //1rem = 12, 12/16
+    font-size: 48.25%; //1rem = 12, 12/16
   }
 }
 

@@ -18,17 +18,16 @@
     justify-content: center;
     transition: all 1s;
     @include mixins.respond(tab-port){
-        width: 60rem;
+        width: 43rem;
         padding: 1.2rem;
+        margin-top: -6rem;
     } 
+ 
     @include mixins.respond(phone){
-        width: 45rem;
-        padding: 1.2rem;
-    }
-        @include mixins.respond(phone){
-              width: 19rem; 
+        width: 17rem;
+        margin-top: -6rem;
 
-            }
+    }
 
     &:hover{
         background-color: #1974D2;
