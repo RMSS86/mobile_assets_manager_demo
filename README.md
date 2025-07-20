@@ -34,12 +34,14 @@ This application uses QR based tecnology in order to create catalogs over a simp
 > Some from the React.js / SASS Front_end UI
 ![alt text](frontend/public/media/landing_page_One.png)
 ![alt text](frontend/public/media/side_nav_bar.png)
-![alt text](frontend/public/media/branding_page_one.png)
 
 >UI Remake
-<video controls src="frontend/src/assets/videos/Landing_UI_shot_01.mp4" title="Title"></video>
-![alt text](frontend/public/media/UI_remake_desk.png) 
+![video](frontend/src/assets/videos/Landing_UI_shot_01.mp4)
+![alt text](frontend/public/media/UI_remake_desk.png)
+![alt text](frontend/public/media/branding_page_one.png)
 ![alt text](frontend/public/media/IU_remake_tablet.png)
+
+<video src="frontend/src/assets/videos/Landing_UI_shot_01.mp4" title="Title"></video>
 
 > Dedicated Media
 ![alt text](frontend/public/media/branding_two.png)
