@@ -26,23 +26,22 @@ export default function ItemsPage({
       onClick={_onClick}
       style={_style}
     >
-      {/* {children} */}
-    
+    {/* SUBHEADER */}
     <SubHeader _logo_tag='e-AM' _page_tag='Manage Assets' _menu={<HeaderFragment />}/>
 
-    {/* ///MAP FORM DB!//*/}
+    {/* PENDING MAPPING FORM DB! */}
     <div className='products_grid'>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
-   
+      {DUMMY_ASSETS.map((e)=>(
+        <ProductCard _img={e.url} _title={e.cathegory} _desc={e.desc} _code={e.code} _amount={e.quanity.toString()}/>
+          )
+        )
+      }
+ 
     </div>
 
+    {/* TUTORIALS OR REGISTRATION PAGE? xD */}
     <Landing_section_action />
+
     </ContextType>
   );
 }
@@ -66,5 +65,5 @@ import SubHeader from '../../UI/elements/headers/SubHeader';
 import './ItemsPage.scss'; //@ts-ignore
 import {BG_img_one} from '../../../utility/assetsImport.js';
 import Landing_section_action from '../home/sections/Landing_section_action.js';import HeaderFragment from '../../UI/elements/headers/HeaderFragment.js';
-import { INTERNET_IMAGE_URLS } from '../../../utility/data/InternetImages.js';
+import { DUMMY_ASSETS } from '../../../utility/data/InternetImages.js';
 

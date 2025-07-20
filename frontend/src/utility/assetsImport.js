@@ -28,7 +28,7 @@ import Qr_one_icon from '../assets/icons/web/qr_code_2_24dp_E3E3E3_FILL0_wght400
 import Qr_add_icon from '../assets/icons/web/qr_code_2_add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
 import Menu_icon from '../assets/icons/web/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
 import Home_icon from '../assets/icons/web/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
-
+import Info_icon from '../assets/icons/web/info_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
 //> Sub menu icons
 import Add_circle_icon from '../assets/icons/web/add_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
 import search_icon from '../assets/icons/web/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
@@ -49,7 +49,7 @@ export {
 
 //> ICONS    
 export {
-    
+    Info_icon,
     Qr_scan_icon,
     Add_icon,
     Close_icon,
