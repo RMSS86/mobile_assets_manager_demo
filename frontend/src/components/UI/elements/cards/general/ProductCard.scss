@@ -3,7 +3,7 @@
 .card{
     @include layout-elements.card_product(
         $pad:0, $bg:#ffffff96,
-        $border_r:6px, $height:28em);
+        $border_r:6px, $height:32em);
     
     &_header{
         position: relative;
@@ -11,11 +11,11 @@
 
     &_img{
         border-radius: 6px;
-        width: 95%;
-        height: auto;
+        width: 96%;
+        height: 23rem;
         margin-top: 1rem;
         box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
-
+        max-height: 27rem;
         &:hover{
             transition: all 1s;
             transform: scale(1.01);
@@ -91,7 +91,8 @@
         
         &_desc{
             color: #000;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 400;
         }
 
     }
@@ -145,4 +146,4 @@
     }
 }
 
-       
+       //##59C3FF

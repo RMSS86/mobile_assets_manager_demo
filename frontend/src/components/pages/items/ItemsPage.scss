@@ -7,7 +7,7 @@
     @include layouts.dynamic_Padding($min_val:1.8%);
 
     &_grid{
-        @include grid.grid_general($min_val:240px,$gap:1.2rem);
+        @include grid.grid_general($min_val:240px,$gap:1.5rem);
         margin-bottom: 3rem;
             //> FOR ELEMENTS TO FIT IN SCREEN
             @include mixins.respond(phone-large){
