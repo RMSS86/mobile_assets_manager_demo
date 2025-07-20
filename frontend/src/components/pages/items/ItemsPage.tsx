@@ -32,15 +32,14 @@ export default function ItemsPage({
 
     {/* ///MAP FORM DB!//*/}
     <div className='products_grid'>
-      <ProductCard _img={BG_img_one} _title='Test Product 1' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 2' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 3' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 4' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 4' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 5' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 6' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-      <ProductCard _img={BG_img_one} _title='Test Product 7' _desc='This is a test product that serves as an indicator of fully responsive card and integration'/>
-    
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+      <ProductCard _img={INTERNET_IMAGE_URLS[1]} _title='Electronics' _desc='Laptop Computer'_code='Asset_4398457A'/>
+   
     </div>
 
     <Landing_section_action />
@@ -67,4 +66,5 @@ import SubHeader from '../../UI/elements/headers/SubHeader';
 import './ItemsPage.scss'; //@ts-ignore
 import {BG_img_one} from '../../../utility/assetsImport.js';
 import Landing_section_action from '../home/sections/Landing_section_action.js';import HeaderFragment from '../../UI/elements/headers/HeaderFragment.js';
+import { INTERNET_IMAGE_URLS } from '../../../utility/data/InternetImages.js';
 

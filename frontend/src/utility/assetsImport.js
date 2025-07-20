@@ -29,6 +29,12 @@ import Qr_add_icon from '../assets/icons/web/qr_code_2_add_24dp_E3E3E3_FILL0_wgh
 import Menu_icon from '../assets/icons/web/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
 import Home_icon from '../assets/icons/web/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
 
+//> Sub menu icons
+import Add_circle_icon from '../assets/icons/web/add_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
+import search_icon from '../assets/icons/web/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
+import delete_icon from '../assets/icons/web/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
+
+
 //> ASSETS
 export { 
     GeneralLogo,
@@ -42,5 +48,20 @@ export {
     Actor_male_image_one };
 
 //> ICONS    
-export {Qr_scan_icon,Add_icon,Close_icon,Fav_icon,Qr_one_icon,Menu_icon,Home_icon,Qr_add_icon };
+export {
+    
+    Qr_scan_icon,
+    Add_icon,
+    Close_icon,
+    Fav_icon,
+    Qr_one_icon,
+    Menu_icon,
+    Home_icon,
+    Qr_add_icon,
+
+    Add_circle_icon,
+    delete_icon,
+    search_icon,
+ };
+
 

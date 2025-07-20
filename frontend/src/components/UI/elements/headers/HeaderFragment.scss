@@ -1,5 +1,29 @@
 
 
 .fragment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 9rem;
 
+    &__wrapper{
+        width: 110%;
+        
+    }
+
+    &__icon{
+        border: 1px solid #fafafa5c;
+        padding: 1.2rem 3rem;
+        margin: 0 0.7rem ;
+        border-radius: 9px;
+        transition: all 1s ease;
+
+        &:hover{
+            border: 1px solid #4e4e4e30;
+            background-color: #ffffff2d;
+            transform: scale(1.1);
+            box-shadow: var(--wp--preset--shadow--natural-simple);
+        }
+    }
 }
+

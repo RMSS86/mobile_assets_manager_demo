@@ -14,14 +14,14 @@
     $max_h:15rem,
 ){
         padding: $pad;
-        @if $border{ border: 1px solid border_color; }
+        @if $border{ border: 1px solid $border_color; }
         border-radius: $border_r;
         background-color: $bg;
         text-align: $align;
-        margin: margin;
+        margin: $margin;
         color: $color;
         // max-height: $max_h;
-        // height: $max_h;
+        height: $height;
 
 }
 

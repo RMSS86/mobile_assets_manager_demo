@@ -20,15 +20,20 @@ export default function HeaderFragment({
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
-    <ContextType
+    <ContextType 
       {...rest}
       id={_id}
       className={_className}
       onClick={_onClick}
       style={{}}
     >
-      {children}
-      
+      {/* {children} */}
+      {SUB_HEADER_ITEMS.map((e)=>(
+        <div className='fragment__wrapper'>
+        <img className='fragment__icon' src={e.icon}></img>
+      </div>
+      ))}
+
     </ContextType>
   );
 }
@@ -51,3 +56,4 @@ type _defaultProps = {
 //@ts-ignore
 import './HeaderFragment.scss'; //@ts-ignore
 import {BG_img_one} from '../../../../utility/assetsImport.js';
+import { SUB_HEADER_ITEMS } from '../../../../utility/data/UI-Data/UIData.js';

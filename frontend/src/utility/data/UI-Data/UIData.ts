@@ -14,9 +14,21 @@ const FOOTER_DATA: footerTag[] = [
   { tag: "Contact us", link: "https://www.linkedin.com/in/robert-solis-stevenson-6a458a265/" },
 ];
 
-export { HEADER_DATA, FOOTER_DATA };
+const SUB_HEADER_ITEMS: _icons[] = [
+  { icon: Add_circle_icon },
+  { icon: delete_icon },
+  { icon: Fav_icon },
+  { icon: search_icon },
+  { icon: Qr_scan_icon },
+
+]
+export { HEADER_DATA, FOOTER_DATA, SUB_HEADER_ITEMS };
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////
+type _icons = {
+  icon: string;
+}
+
 type _menuFeature = {
   id: number;
   menu: string;
@@ -36,3 +48,11 @@ type _brandings = {
   direct: string;
   alt: string;
 };
+
+import {
+    Add_circle_icon,     
+    delete_icon,
+    search_icon,
+    Fav_icon,
+    Qr_scan_icon, //@ts-ignore
+  } from '../../../utility/assetsImport.js';

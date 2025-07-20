@@ -11,6 +11,7 @@ export default function ProductCard({
   _children_mode=false,
   _img,
   _desc,
+  _code='Asset_4398457A',
   _title,
   _style,
   _onClick,
@@ -35,7 +36,7 @@ export default function ProductCard({
             <> 
 
                 <div className='card_header'> 
-                    <img alt='product' className='card_img' src={_img} />
+                    <img alt='product' className='card_img' src={_img} crossOrigin="anonymous" />
                     <img alt='product' className='card_logo' src={GeneralLogo} />
                     <h2 className='card_title'>{_title}</h2>
                     {/* ///QR CODE ICON HERE/// */}
@@ -48,12 +49,12 @@ export default function ProductCard({
                         {/* Qr_scan_icon, Add_icon,Qr_add_icon */}
                          </div> 
                 </div>
-                    
-                    <p className='card_desc'>{_desc}</p>
-                    <p className='card_code'>Asset_4398457A</p>
-
+                    <div className='card_descs'>
+                    <p className='card_descs_cathegory'>Description</p>
+                    <p className='card_descs_desc'>{_desc}</p>
+                    </div>
+                    <p className='card_code'>{_code}</p>
             </>
-            
         }
       
     </ContextType>
@@ -69,6 +70,7 @@ type _defaultProps = {
   _style?: React.CSSProperties;
 
     _children_mode?: false;
+    _code?: string;
     _img?: string;
     _desc?: string;
     _title?: string;

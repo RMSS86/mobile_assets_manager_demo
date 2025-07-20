@@ -1,68 +1,69 @@
 /////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR//////
 /////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR//////
-const DUMMY_TOUR = {description: 
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    difficulty: "easy",
-    duration: 5,
-    durationWeeks: 0.7142857142857143,
-    guides: [],
-    id: "5c88fa8cf4afda39709c2951",
-    imageCover
-    : 
-    "trax-7.jpg",
-    images
-    : 
-    (3) ['tour-1-1.jpg', 'tour-1-2.jpg', 'tour-1-3.jpg'],
-    locations
-    : 
-    (3) [{…}, {…}, {…}],
-    maxGroupSize
-    : 
-    25,
-    name
-    : 
-    "The Forest Hiker",
-    price
-    : 
-    397,
-    ratingsAverage,
-    : 
-    5,
-    ratingsQuantity,
-    : 
-    9,
-    reviews,
-    : 
-    [],
-    secretTour,
-    : 
-    false,
-    slug
-    : 
-    "the-forest-hiker",
-    startDates
-    : 
-    (3) ['2021-04-25T09:00:00.000Z', '2021-07-20T09:00:00.000Z', '2021-10-05T09:00:00.000Z'],
-    startLocation
-    : 
-    {type: 'Point', coordinates: Array(2), description: 'Banff, CAN', address: '224 Banff Ave, Banff, AB, Canada'},
-    summary
-    : 
-    "Breathtaking hike through the Canadian Banff National Park and more.",
-    trending
-    : 
-    true
-    __v
-    : 
-    0
-    _id
-    : 
-    "5c88fa8cf4afda39709c2951"};
+// const DUMMY_TOUR = {description: 
+//     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+//     difficulty: "easy",
+//     duration: 5,
+//     durationWeeks: 0.7142857142857143,
+//     guides: [],
+//     id: "5c88fa8cf4afda39709c2951",
+//     imageCover
+//     : 
+//     "trax-7.jpg",
+//     images
+//     : 
+//     (3) ['tour-1-1.jpg', 'tour-1-2.jpg', 'tour-1-3.jpg'],
+//     locations
+//     : 
+//     (3) [{…}, {…}, {…}],
+//     maxGroupSize
+//     : 
+//     25,
+//     name
+//     : 
+//     "The Forest Hiker",
+//     price
+//     : 
+//     397,
+//     ratingsAverage,
+//     : 
+//     5,
+//     ratingsQuantity,
+//     : 
+//     9,
+//     reviews,
+//     : 
+//     [],
+//     secretTour,
+//     : 
+//     false,
+//     slug
+//     : 
+//     "the-forest-hiker",
+//     startDates
+//     : 
+//     (3) ['2021-04-25T09:00:00.000Z', '2021-07-20T09:00:00.000Z', '2021-10-05T09:00:00.000Z'],
+//     startLocation
+//     : 
+//     {type: 'Point', coordinates: Array(2), description: 'Banff, CAN', address: '224 Banff Ave, Banff, AB, Canada'},
+//     summary
+//     : 
+//     "Breathtaking hike through the Canadian Banff National Park and more.",
+//     trending
+//     : 
+//     true
+//     __v
+//     : 
+//     0
+//     _id
+//     : 
+//     "5c88fa8cf4afda39709c2951"};
 /////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR//////
 /////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR////DUMMY_TOUR//////
 
 /////DUMMY_USER/////DUMMY_USER/////DUMMY_USER/////DUMMY_USER/////DUMMY_USER/////
 /////DUMMY_USER/////DUMMY_USER/////DUMMY_USER/////DUMMY_USER/////DUMMY_USER/////
+const DUMMY_TOUR = {}
 const DUMMY_USER = {
   _id: {
     $oid: "6791a462e993cb015ba65339",
@@ -99,6 +100,7 @@ const DUMMY_REVIEW = {
   },
   __v: 0,
 };
+
 /////DUMMY_REVIEW/////DUMMY_REVIEW/////DUMMY_REVIEW/////DUMMY_REVIEW/////
 /////DUMMY_REVIEW/////DUMMY_REVIEW/////DUMMY_REVIEW/////DUMMY_REVIEW/////
 export { DUMMY_TOUR, DUMMY_USER, DUMMY_REVIEW };
