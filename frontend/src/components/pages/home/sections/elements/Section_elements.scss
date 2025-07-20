@@ -1,5 +1,17 @@
 @use '../../../../../sass/libs/mixins';
 
+.bg_video{
+    position: absolute;
+    margin-top: -10%;
+    margin-left: -1.5%; 
+    /* margin-right: -11%; */
+    border-radius: 12px;
+    width: 102%;
+    height: 123vh; 
+    z-index: -1;
+    justify-content: center;
+}
+
 .paragragh{
 
     text-align: left;

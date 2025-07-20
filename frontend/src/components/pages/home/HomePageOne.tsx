@@ -20,10 +20,16 @@ export default function HomePage({
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
     <>
-      <_contextType {...rest} className={_className} onClick={_onClick} style={_style}>
-       <Landing_section_brand /> 
-       <Landing_section_product />
-       <Landing_section_action />
+      <_contextType {...rest} 
+      
+      className={_className} 
+      onClick={_onClick} style={_style}>
+
+      <Landing_section_opener />
+      <Landing_section_brand /> 
+      <Landing_section_product />
+      <Landing_section_action />
+
       </_contextType>
     </>
   );
@@ -71,4 +77,5 @@ import {
 import Landing_section_brand from "./sections/Landing_Section_Brand.js";
 import Landing_section_product from "./sections/Landing_section_product.js";
 import Landing_section_action from "./sections/Landing_section_action.js";
+import Landing_section_opener from "./sections/Landing_section_opener.js";
 

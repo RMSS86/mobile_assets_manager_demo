@@ -27,7 +27,7 @@ html {
   // }
   @include mixins.respond(phone) {
     // width < 1200?
-    font-size: 45.24%; //1 rem = 9px, 9/16 = 50%
+    font-size: 42.24%; //1 rem = 9px, 9/16 = 50%
   }
   // @include mixins.respond(phone-large) {
   //   // width < 1200?
@@ -57,7 +57,7 @@ html {
     font-size: 49.5%; //1 rem = 8px, 8/16 = 50%
   }
   @include mixins.respond(big-desktop) {
-    font-size: 49.25%; //1rem = 12, 12/16
+    font-size: 51.25%; //1rem = 12, 12/16
   }
 }
 
@@ -77,10 +77,10 @@ body {
 
 .root{
   
-  @include grid.grid_body();
-  @include mixins.respond(tab-port) {
-    padding: 0;
-  }
+  // @include grid.grid_body();
+  // @include mixins.respond(tab-port) {
+  //   padding: 0;
+  // }
   
 }
 

@@ -36,10 +36,13 @@ This application uses QR based tecnology in order to create catalogs over a simp
 ![alt text](frontend/public/media/side_nav_bar.png)
 ![alt text](frontend/public/media/branding_page_one.png)
 
+>UI Remake
+<video controls src="frontend/src/assets/videos/Landing_UI_shot_01.mp4" title="Title"></video>
 
 > Dedicated Media
 ![alt text](frontend/public/media/branding_two.png)
 ![alt text](frontend/public/media/branding_one.png)
+
 
 
 The following ```SQL``` Query demostrates the way the simple ```node.js``` backend serves and replies to the userinterface once the QRCode is scanned from the KivyMD textured interface, returning an object that ```pandas``` and ```SQLAlchemy``` libraries then parses and digest into the mobile ```UI```.

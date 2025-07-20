@@ -2,6 +2,14 @@
 @use  '../../../../sass/libs/mixins';
 @use '../../../../sass/layout/layout-elements';
 
+.opener{
+    position: relative;
+
+    &_title {
+
+    }
+}
+
 .landing{
     &__wrapper{
         display: flex;
@@ -73,9 +81,10 @@
         }
 
         &-foot{
-            
+            filter: invert(1);
             height: 8.1rem;
         }
+
         &-credit{
             width: 3rem;
             font-size: 1.4rem;
@@ -158,12 +167,19 @@
                 padding-bottom: 1rem;
             }
     }
+
     &__middle{
         &-img{
+            display: none;
             height: 19rem;
             padding-left: 42%;
             padding-right: 50%;
             margin: 6rem 0;
+            
+            @include mixins.respond(tab-port){
+                display: block;
+
+            }
         }
     }
 }
