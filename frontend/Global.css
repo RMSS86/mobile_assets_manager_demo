@@ -28,8 +28,8 @@
 }
 
 aside{
-  height: 85vh;
-  top: 58px;
+    height: 84vh;
+    top: 67px;
   /* left: -100%; */
   position: fixed;
   align-self: start;

@@ -18,6 +18,8 @@ import QR_Scan_me from "../assets/icons/qr/Brand_gitQr.png";
 //////////////PEXELS ASSETS
 import BG_img_one from '/media/pexels-winson5293-2701434.jpg';
 import Actor_male_image_one from '/media/pexels-tima-miroshnichenko-6169634.jpg';
+import Actor_female_image_one from '/media/pexels-kampus-7289739.jpg';
+import context_image_one from '/media/pexels-kampus-7289723.jpg';
 
 //> ICONS
 import Qr_scan_icon from '../assets/icons/web/qr_code_scanner_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png';
@@ -45,7 +47,10 @@ export {
     MotherTechLogo,
     BG_img_one,
     QR_Scan_me,
-    Actor_male_image_one };
+    Actor_male_image_one,
+    Actor_female_image_one,
+    context_image_one,
+ };
 
 //> ICONS    
 export {
