@@ -4,6 +4,8 @@
 
 .top-nav {
   @include layout-elements.top_nav();
+  margin-top: 1.2rem;
+
       //> CHANGE ARRAGE POSITION OF ELEMENTS
       @include mixins.respond(phone-large){
       justify-content: space-around;

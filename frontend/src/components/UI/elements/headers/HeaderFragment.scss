@@ -1,4 +1,4 @@
-
+@use './../../../../sass/libs/mixins';
 
 .fragment{
     display: flex;
@@ -6,8 +6,26 @@
     justify-content: space-around;
     margin-left: 9rem;
 
+
+    @include mixins.respond(phone){
+    margin-left: 0;
+    justify-content: center;
+    }
+
+   @include mixins.respond(phone-small){
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
     &__wrapper{
         width: 110%;
+
+    @include mixins.respond(phone-small){
+        width: auto;
+        padding: 1rem;
+
+    }
         
     }
 

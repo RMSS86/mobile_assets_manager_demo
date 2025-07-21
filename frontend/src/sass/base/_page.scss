@@ -14,6 +14,8 @@
 html,
 body {
   overflow-x: hidden;
+  scrollbar-width: none;
+  --me-overflow-style:none;
   //min-height: vars.$default-body-height; //> DEFAULT HEIGHT
 }
 html {

@@ -5,15 +5,15 @@ const ContextId = "fragmentpictureheader";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function HeaderFragment({
-  children,
+  children, 
   _className='fragment',
   _src,
   _id = ContextId,
   _style,
-  _onClick,
+  _onClick, 
   _onCompClick,
   ...rest
-}: _defaultProps) {
+}: _defaultProps) { 
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
 

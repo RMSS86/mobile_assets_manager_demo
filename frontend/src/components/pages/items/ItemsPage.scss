@@ -4,17 +4,21 @@
 
 
 .products{ 
+    //> DEFINES THE WHOLE LAY OUT SCALED PADDING
     @include layouts.dynamic_Padding($min_val:1.8%);
 
     &_grid{
-        @include grid.grid_general($min_val:240px,$gap:1.5rem);
+        @include grid.grid_general($min_val:240px, $gap:1.8rem);
         margin-bottom: 3rem;
             //> FOR ELEMENTS TO FIT IN SCREEN
             @include mixins.respond(phone-large){
-                 @include grid.grid_general($min_val:225px,$gap:1.2rem);
+                 @include grid.grid_general($min_val:225px, $gap:1.2rem);
+            }
+            @include mixins.respond(phone){
+                 @include grid.grid_general($min_val:225px, $gap:1.8rem);
             }
             @include mixins.respond(phone-small){
-                 @include grid.grid_general($min_val:198px,$gap:1.2rem);
+                 @include grid.grid_general($min_val:225px, $gap:2.1rem);
             }
 
         &-card{
@@ -25,6 +29,13 @@
             text-align: center;
             color: #fff;
             height: fit-content;
+            max-width: 39rem;
+
+            @include mixins.respond(phone){
+            margin-bottom: 0.5rem;            
+            }
+
+    
         }
     }
 }

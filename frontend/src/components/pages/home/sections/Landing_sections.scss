@@ -56,6 +56,8 @@
             }
             //> changes lay out position
             @include mixins.respond(phone){
+                margin-top: -10rem;
+                padding-top: 0;
                 max-width: 40rem;
                 width: 100%;
             }
