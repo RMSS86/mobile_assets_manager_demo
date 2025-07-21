@@ -37,7 +37,7 @@ This application uses QR based tecnology in order to create catalogs over a simp
 >UI Remake
 ![alt text](frontend/public/media/UI_remake_desk.png)
 ![alt text](frontend/public/media/branding_page_one.png)
-![Assets_page](frontend/public/media/Assets_page_UI.png)
+![Assets_page](frontend/public/media/Assets_page.png)
 ![alt text](frontend/public/media/IU_remake_tablet.png)
 
 > Dedicated Media
