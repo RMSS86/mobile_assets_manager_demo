@@ -28,8 +28,10 @@ export default function Landing_section_product({
     >
 
         <section className='product'>
-    
+    <Tilt>
             <img className='product-image' src={Branding_big_two}/>
+
+    </Tilt>
                 <div className='product__wrapper'>
               
                         <Paragragh_landing 
@@ -66,8 +68,10 @@ export default function Landing_section_product({
               
                  
                 </div>
+                <Tilt>
+                            <img className='product-image' src={Branding_big_one}/>
 
-            <img className='product-image' src={Branding_big_one}/>
+                </Tilt>
 
 
         </section>
@@ -94,4 +98,5 @@ type _defaultProps = {
 //@ts-ignore
 import './Landing_sections.scss'; //@ts-ignore
 import {GeneralLogo, Branding_big_one, Branding_big_two,MotherTechLogo,QR_Scan_me} from '../../../../utility/assetsimport.js';
+import Tilt from 'react-parallax-tilt';
 import Paragragh_landing from './elements/Parragraph.js';

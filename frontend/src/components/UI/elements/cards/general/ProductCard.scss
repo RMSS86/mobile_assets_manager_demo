@@ -3,7 +3,7 @@
 .card{
     @include layout-elements.card_product(
         $pad:0, $bg:#ffffff96,
-        $border_r:6px, $height:32em);
+        $border_r:6px, $height:32.6em);
     
     &_header{
         position: relative;
@@ -100,7 +100,7 @@
     &_code{
         color: #fff;
         text-align: end;
-        background-color: #1974D2;
+        background-color: #1976d2;
         border-radius: 0 0 6px 6px;
         font-size: 1.2rem;
         padding: 1rem;
@@ -113,6 +113,8 @@
         border-radius: 7px;
         padding: .25rem;
         margin-right: 1rem;
+        align-content: center;
+
         &-icon{
             transition: all 1s ease-in-out;
 
@@ -133,8 +135,10 @@
         background-color: #0000001f;
         border-radius: 7px;
         padding: 1rem;
-        
+    
         &-icon{
+            height: 2.4rem;
+
             margin: 0.25rem;
             transition: all 1s ease-in-out;
 
@@ -144,6 +148,9 @@
             }
         }
     }
+}
+.minus_margin{
+        margin: -0.25rem;
 }
 
        //##59C3FF

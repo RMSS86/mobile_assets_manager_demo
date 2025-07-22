@@ -35,6 +35,11 @@
         margin: 0 0.7rem ;
         border-radius: 9px;
         transition: all 1s ease;
+        width: 76%;
+        @include mixins.respond(phone){
+            width: 84%;
+
+    }
 
         &:hover{
             border: 1px solid #4e4e4e30;

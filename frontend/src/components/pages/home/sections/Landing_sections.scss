@@ -2,6 +2,15 @@
 @use  '../../../../sass/libs/mixins';
 @use '../../../../sass/layout/layout-elements';
 
+@mixin hover_1_1{
+    transition: all 1s ease;
+    border-radius: 12px;
+    &:hover{
+        transform: scale(1.2);
+        box-shadow:  1px 1px 7px 0px #222633d6;
+    }
+}
+
 .opener{
     position: relative;
 
@@ -140,16 +149,20 @@
     &-logo{
         height: 7.2rem;
         margin-left: 3rem;
+        @include hover_1_1;
+
         //> changes lay out position
         @include mixins.respond(tab-port){
-        margin-right: 3rem;
-        margin-left: 0;
+            margin-right: 3rem;
+            margin-left: 0;
         }
         
     }
     &-logoL{
         height: 7.2rem;
         margin-right: 3rem;
+        @include hover_1_1;
+
     }
     &__wrapper{
         display: flex;
@@ -191,12 +204,10 @@
 }
 
 .branding{
+    margin: 0.5rem;
     border-radius: 12px;
     background-color: #f7f7f7;
-    margin-bottom: 3rem;
-    margin: 0.5rem;
-    //box-shadow: 1px 1px 7px 0px rgba(34, 38, 51, 0.8392156863);
-    box-shadow: inset 1px 1px 7px 0px rgba(34, 38, 51, 0.8392156863);
+    box-shadow: inset 1px 1px 7px 0px #222633d6;
 }
 
 .icons{
@@ -207,11 +218,38 @@
 }
 
 .actions{
-    background-color: #1974D2;
-    height: 66vh;
+    margin: 1% 10%;
+    background-color: #1974D2;// #FDFEFF;// #1974D2;
+    height: 50vh;
     border-radius: 1.6rem;
     margin-bottom: 0.6rem;
+    box-shadow: var(--wp--preset--shadow--natural-simple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__celd{
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__celds {
+        border-radius: 12px;
+
+    }
+    &__celder{
+        margin-top: 2%;
+
+    }
+
+    &-bg_white{
+        background-color: #f7f7f7;
+    }
 }
+
 
 
 .order_swap{

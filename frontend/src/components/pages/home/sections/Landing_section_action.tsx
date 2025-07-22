@@ -13,7 +13,15 @@ export default function Landing_section_action({
   return (
     <>
       <_contextType {...rest} className={_className} onClick={_onClick} style={{}}>
-        {children}
+       
+        {/* {children} */}
+        <div className="actions__celd" > 
+          <div className="actions__celds"> Hello </div>
+          <div className="actions__celds actions-bg_white"> Hello </div>
+           </div>
+           <div className="actions__celder"> Hello </div>
+        
+
       </_contextType>
     </>
   );

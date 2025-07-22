@@ -1,12 +1,16 @@
 @use '../../../sass/layout/grid';
 @use '../../../sass/layout/layout-elements';
 @use '../../../sass/base/themeColors';
+@use '../../../sass/libs/mixins';
 
 .footer {
     //> DECLARES GRID GLOBAL LAYOUT VALUE
     @include grid.area_footer();
     background-color: #222633;
     border-radius: 12px 12px 0 0;
+    @include mixins.respond(phone-large){
+        border-radius: 12px;
+    }
 
     &__nav{
         @include layout-elements.ul_cleaner();
@@ -43,6 +47,11 @@
         margin: 2rem 2rem 1rem 2rem;
         border-radius: 12px;
         height: 13rem;
+        transition: all 1s;
+        &:hover{
+            transform: scale(1.1);
+
+        }
     }
      &-credit{
         margin-bottom: 4.2rem;
