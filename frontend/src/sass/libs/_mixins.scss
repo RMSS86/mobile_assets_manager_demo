@@ -226,3 +226,11 @@
 }
 //////FILTERS READY//////FILTERS READY//////FILTERS READY//////FILTERS READY/////
 //////FILTERS READY//////FILTERS READY//////FILTERS READY//////FILTERS READY/////
+
+/// TAKES AN IMAGE AND PRESERVES RATIO WHILE SCALING HEIGH.
+/// @param {vh} $height SVG data URL.
+@mixin image_autosize($height:50vh){
+    height: auto;
+    width: 100%;
+    max-height: $height;
+}

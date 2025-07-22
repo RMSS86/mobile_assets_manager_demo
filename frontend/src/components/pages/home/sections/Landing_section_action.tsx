@@ -15,11 +15,28 @@ export default function Landing_section_action({
       <_contextType {...rest} className={_className} onClick={_onClick} style={{}}>
        
         {/* {children} */}
-        <div className="actions__celd" > 
-          <div className="actions__celds"> Hello </div>
-          <div className="actions__celds actions-bg_white"> Hello </div>
+        <div className="actions__celd" >  
+          <div className="actions__celds "> 
+            <img alt="branding" src={Branding_logo_leters} className="actions-brand_img"/>
+            <h3 className="actions-text_white actions-text_lower actions-text_underpara"> Chek out our plans Now </h3>
+
+             </div>
+            
+          <div className="actions__celds "> 
+            
+            <h1 className="actions-text_black actions-text_upper"> Unorganized Assets</h1>
+            <p className="actions-text_white actions-text_lower actions-text_para"> Tired of having your assets all over the place? </p>
+            <p className="actions-text_white actions-text_lower actions-text_para"> Get all your assets and items organized with easy assets manager mobile, from a simple click to a QR label generator, print register and check on the assets page! </p>
+            <div className="actions__celds-unit">
+              <img alt="logo" src={QR_Scan_me} className="actions-brand_img-low "/>
+            </div>
+             
+             </div>
+         
            </div>
-           <div className="actions__celder"> Hello </div>
+           <div className="actions__celder"> 
+            <a className=" actions__btn">Create a new account</a>
+             </div>
         
 
       </_contextType>
@@ -58,4 +75,5 @@ type _altProps = {
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 //@ts-ignore
-import './Landing_sections.scss';
+import './Landing_sections.scss'; //@ts-ignore
+import  {Branding_logo_leters, GeneralLogo, QR_Scan_me} from '../../../../utility/assetsImport.js';

@@ -10,7 +10,10 @@ import userLogo from "../assets/avatars/user.png";
 
 //////////////BRANDING IMAGES
 import Branding_big_one from "/media/branding_one.png";
-import Branding_big_two from "/media/branding_two.png";
+import Branding_big_two from "/media/branding_two.png"; 
+import Branding_logo_leters from "/media/logo_and_letters.png"; 
+
+
 
 ////QR SCANCODE
 import QR_Scan_me from "../assets/icons/qr/Brand_gitQr.png";
@@ -50,6 +53,7 @@ export {
     Actor_male_image_one,
     Actor_female_image_one,
     context_image_one,
+    Branding_logo_leters,
  };
 
 //> ICONS    

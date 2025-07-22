@@ -1,6 +1,7 @@
 @use '../../../../sass/layout/grid';
 @use  '../../../../sass/libs/mixins';
 @use '../../../../sass/layout/layout-elements';
+@use '../../../../sass/libs/animations';
 
 @mixin hover_1_1{
     transition: all 1s ease;
@@ -212,15 +213,15 @@
 
 .icons{
     &-icon{
-            width: 50%;
-    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+        width: 50%;
+        box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
     }
 }
 
 .actions{
-    margin: 1% 10%;
+    height: auto;
+    padding: 6vh 0;
     background-color: #1974D2;// #FDFEFF;// #1974D2;
-    height: 50vh;
     border-radius: 1.6rem;
     margin-bottom: 0.6rem;
     box-shadow: var(--wp--preset--shadow--natural-simple);
@@ -238,18 +239,111 @@
 
     &__celds {
         border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+
+        &:last-child{
+            margin-top: 9rem;
+            @include mixins.respond(phone-small){
+                margin-left: 1.8rem
+            };
+        }
+
+        &-unit{
+            display: flex;
+            justify-content: center;
+        }
 
     }
+
     &__celder{
         margin-top: 2%;
 
     }
 
     &-bg_white{
-        background-color: #f7f7f7;
+        background-color: #e3e3e3;
+  
     }
-}
 
+    &-text{ 
+        &_white{
+            color: #f7f7f7 !important;
+        }
+
+        &_black{
+            color: #161616 !important;
+        }
+        &_upper{
+            font-size: 3rem;
+        }
+        &_lower{
+            font-size: 1.8rem;
+
+        }
+    
+        &_para{
+            max-width: 54rem;
+            margin-top: 2rem;
+
+        }
+
+        &_underpara{
+            margin-top: 2rem;
+            text-align: center;
+            background-color: #504f4f;
+            padding: 3rem 0 1.53rem 0;
+            border-radius: 0 0 12px 12px;
+            margin-top: -2rem;
+            box-shadow: inset 1px 1px 7px 0px #9a9da6d6;
+
+
+        }
+ 
+    }
+    &-brand_img{
+        //> REZIES IMAGES AUTOMATICALLY
+        @include mixins.image_autosize($height:45vh);
+
+        border-radius: 12px;
+        z-index: 2;
+        box-shadow:  1px 1px 7px 0px #222633d6;
+
+        @include animations.hover_1_1($scale:1.2);
+        
+        &-low{
+            height: 11vh;
+            border-radius: 12px;
+            margin-top: 3rem;
+            width: 6.6rem;
+            @include animations.hover_1_1();
+        
+        }
+    }
+
+    &__btn{
+        margin-top: 6rem;
+        background-color: #FDFEFF;
+        color: #1b295b;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 1;
+        padding: 0 3rem;
+        height: 56px;
+        align-items: center;
+        display: inline-flex;
+        text-decoration: none;
+        border: 2px solid transparent;
+        cursor: pointer;    
+        text-transform: uppercase;
+        box-shadow:  1px 1px 7px 0px #222633d6;
+        @include animations.hover_1_1($border_rad:100px);
+
+    }
+
+}
 
 
 .order_swap{
