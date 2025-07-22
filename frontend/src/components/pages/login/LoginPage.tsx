@@ -18,7 +18,7 @@ export default function LoginPage({
 
   //> DECALRING CONTEXT / USER DATA
   let _navigate = useNavigate(); //@ts-ignore
-  // const { globalUser, setGlobalUser } = useUserContext();
+  const { globalUser, setGlobalUser } = useUserContext();
   const [form, setForm] = useState(_loginDefault);
 
   // console.log("from context: ", globalUser);
@@ -27,7 +27,48 @@ export default function LoginPage({
   const HandlerChange = (e: any) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+//> LOG_IN LOGIC
+  async function _sendLoginRequest(e: { preventDefault: () => void }) {
+    e.preventDefault();
+    //< include ReactQuery
+    const _response: any = await FetchData({
+      _endPoint: "users/login",
+      _method: "POST",
+      _body: form,
+    });
 
+    //<  MAKE AN AXULIARY FUNCTION PASSABLE FROM DAILER
+    const _resData = await _response.json();
+    const _user = _resData.data.user;
+    const _userToken = _resData.token;
+    const _preContextUser = {
+      _id: _user._id,
+      _role: _user.role,
+      _active: true,
+      _name: _user.name,
+      _email: _user.email,
+      _passwordChangedAt: _user.passwordChangedAt,
+      _token: _userToken,
+      _imgDir: "http://localhost/img/users/",
+      _photo: _user.photo,
+    };
+
+    if (_resData.status === "success") {
+      showAlert("success", "Succesfuly Logged-in!");
+      logActions({
+        _action: "login", //@ts-ignore
+        _direct: _navigate("/assets"),
+      });
+      useLocalUser({
+        _action: "store",
+        _storageKey: "user",
+        _storage: JSON.stringify(_preContextUser),
+        _userDispatcher: setGlobalUser,
+      });
+    }
+
+    return _resData;
+  }
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
@@ -133,9 +174,17 @@ import { Link, useNavigate } from 'react-router';
 import './LoginPage.scss';
 import { useState } from 'react';
 import { _loginDefault } from '../../../utility/data/data';
+import { useUserContext } from "../../../store/UserContext.js";
+import { Navigate, redirect } from "react-router-dom";
 
 import { context_image_one, //@ts-ignore
   GeneralLogo } from '../../../utility/assetsImport.js';
-
+import FetchData from "../../../requests/http";
 import FormInput from './elements/InputElement';
+import { useLocalUser } from '../../../models/hooks/useLocalUser.js';
+import { logActions } from '../../../models/functions/userLogActions.js';
 
+import {
+  showAlert,
+  //@ts-ignore
+} from "../../../utility/imports.js";

@@ -4,11 +4,16 @@
 
 .top-nav {
   @include layout-elements.top_nav();
-  margin-top: 1.2rem;
+  margin-top: 0.9rem;
 
       //> CHANGE ARRAGE POSITION OF ELEMENTS
       @include mixins.respond(phone-large){
-      justify-content: space-around;
+        margin-top: 0;
+        
+    }
+      @include mixins.respond(phone){
+        margin-top: 1.2rem;
+        
     }
 }
 

@@ -42,8 +42,9 @@ export default function Paragragh_landing({
             <a href="https://skillicons.dev">
               <img 
                 className="paragragh__stack-img"
-                src="https://skillicons.dev/icons?i=py,sqlite,react,js,ts,sass,express"
-              />
+                 src="/media/project_stack.png" 
+                 />
+              {/** https://skillicons.dev/icons?i=py,sqlite,react,js,ts,sass,express*/}
             </a>
           </p>
           <div className="landing__wrapper-footer">

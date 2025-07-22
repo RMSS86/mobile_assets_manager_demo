@@ -114,7 +114,8 @@
         margin-top: calc(1.5rem * calc(1 - var(--tw-space-reverse-2)));
         
         &-img{
-            width: 45rem;  
+            width: 45rem;
+            margin-left: -3.3%;  
             //> changes lay out position
             @include mixins.respond(phone){
                 width: 35rem;  
