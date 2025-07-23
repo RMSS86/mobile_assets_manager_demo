@@ -37,6 +37,7 @@ export default function QrPage({
             src={Actor_male_image_one}
           />
         </div>
+
         <div className="qr_wrapper-right">
           <img alt="qr_scan" className="qr_scan" src={QR_Scan_me} />
           <div className="qr_wrapper-right_foot">

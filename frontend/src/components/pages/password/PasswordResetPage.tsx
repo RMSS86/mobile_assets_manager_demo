@@ -42,11 +42,11 @@ export default function PasswordResetPage({
         className="reset__page"
         onClick={_onClick}
         style={{
-          backgroundImage: `url(${BG_Lettering_white})`,
+          backgroundImage: `url(${Branding_logo_leters})`,
         }}
       >
-        <div className="login__page-form">
-          <form className="form form__login">
+        <div className="reset__page-form">
+          <form className="form form__forgot-password">
             <h2 className="form__title">Reset your Password</h2>
 
             <FormInput
@@ -61,7 +61,10 @@ export default function PasswordResetPage({
             />
 
             <div className="form__group">
-              <button onClick={_sendPWDRSTRequest} className="btn btn--green">
+              <button
+                onClick={_sendPWDRSTRequest}
+                className="btn_form btn_form--purple"
+              >
                 Reset
               </button>
             </div>
@@ -70,7 +73,7 @@ export default function PasswordResetPage({
           <div className="login__page-post">
             <div className="login__page-post_sec">
               <img
-                src={LogoLetters_only_white}
+                src={GeneralLogo}
                 alt="logo"
                 className="login__page-post_logo"
               />
@@ -122,9 +125,9 @@ import FetchData from "../../../requests/http";
 import FormInput from "../login/elements/InputElement";
 import { useState } from "react"; //@ts-ignore
 import {
-  LogoLetters_only_white,
-  BG_Lettering_white,
-} from "../../../utility/imports.js";
+  GeneralLogo,
+  Branding_logo_leters, //@ts-ignore
+} from "../../../utility/assetsImport.js";
 import { Login } from "../../../models/types/userType.js";
 import { _email } from "../../../utility/data/data.js";
 

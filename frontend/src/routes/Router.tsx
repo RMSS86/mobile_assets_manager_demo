@@ -57,7 +57,7 @@ export const GlobalRouterElments = createBrowserRouter(
         <Route path="qr" element={<QrPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="signup" element={<SignupPage />} />
-        {/* <Route path="password-reset" element={<PasswordResetPage />} /> */}
+        <Route path="password-reset" element={<PasswordResetPage />} />
 
         {/* //tours// */}
         {/* //:id// */}
