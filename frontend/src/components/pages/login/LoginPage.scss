@@ -29,6 +29,57 @@
     -webkit-box-shadow:  1px 1px 7px 0px rgba(34, 38, 51, 0.5);
 }
 
+
+.signup__page {
+  height: 72vh;
+  margin: 1.2rem;
+  margin-bottom: 0.9rem;
+  background-size: contain;
+  background-position: top;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include mixins.respond(phone) {
+    flex-direction: column;
+  }
+  @include mixins.respond(big-desktop) {
+    height: 84vh;
+  }
+
+  @include border-top;
+  &-block {
+  box-shadow: var(--wp--preset--shadow--natural);
+
+    &__left {
+      background-color: #ff9797;
+      border-radius: 25px;
+      min-width: 66rem;
+      z-index: 2;
+       }
+   
+       &__right {
+      background-color: #fff;
+      border-radius: 0 25px 25px 0;
+      width: 68rem;
+      margin-left: -3rem;
+    }
+  }
+  &-form {
+    margin-top: 10.3rem;
+  }
+}
+
+.reset__page {
+  height: 72vh;
+  margin-bottom: 0.9rem;
+  background-size: contain;
+  background-position: top;
+  border-radius: 25px;
+
+  @include border-top;
+}
 .login__page {
     height: 77vh;
     margin-top: 1.5rem;
@@ -314,4 +365,8 @@
 //#1a1a1b footer bg color, place in themeColores
 .margin_form-top {
   margin-top: 1.2rem;
+}
+
+.btn-fixed-paddgin{
+  padding: 1.2rem 20.4rem !important;
 }

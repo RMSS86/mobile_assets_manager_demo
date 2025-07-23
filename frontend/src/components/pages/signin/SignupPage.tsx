@@ -94,7 +94,10 @@ export default function SignupPage({
                 _getValue={HandlerChange}
               />
               <div className="form__group">
-                <button onClick={_sendLoginRequest} className="btn btn--pink">
+                <button
+                  onClick={_sendLoginRequest}
+                  className="btn btn--pink btn-fixed-paddgin"
+                >
                   join!
                 </button>
               </div>
@@ -102,7 +105,7 @@ export default function SignupPage({
             <div className="login__page-post">
               <div className="login__page-post_sec">
                 <img
-                  src={LogoLetters_only_white}
+                  src={GeneralLogo}
                   alt="logo"
                   className="login__page-post_logo"
                 />
@@ -115,11 +118,11 @@ export default function SignupPage({
         <div
           className="signup__page-block signup__page-block__right"
           style={{
-            backgroundImage: `url(${BG_Lettering_white})`,
+            backgroundImage: `url(${Actor_female_image_one})`,
             backgroundSize: "cover",
             backgroundPosition: "top",
           }}
-        ></div>
+        />
 
         {children}
       </_contextType>
@@ -157,12 +160,9 @@ type _altProps = {
 //@ts-ignore
 import { NewUser } from "../../../models/types/userType"; //@ts-ignore
 import {
-  LogoLetters_only_white,
-  BrandImage2, //@ts-ignore
-  BG_Lettering_white, //@ts-ignore
-} from "../../../utility/imports.js"; //@ts-ignore
+  Actor_female_image_one,
+  GeneralLogo, //@ts-ignore
+} from "../../../utility/assetsImport.js"; //@ts-ignore
 import "../login/loginPage.scss";
 import FormInput from "../login/elements/InputElement.js";
 import FetchData from "../../../requests/http.js";
-import LogoBox from "../../UI/elements/media/logo/LogoBox.js";
-//import { redirect } from "react-router";
