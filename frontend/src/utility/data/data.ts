@@ -130,7 +130,7 @@ import {
   PasswordReset,
   PasswordUpdate,
   UpdateUser,
-  Email,
+  Email, //@ts-ignore
 } from "../../models/types/userType";
 
 //////EXPORTS//////EXPORTS//////EXPORTS//////EXPORTS//////EXPORTS//////EXPORTS/////////

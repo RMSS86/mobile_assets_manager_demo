@@ -18,7 +18,6 @@ export default function TopNavigator({
   ////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////
   ////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////NAVIGATE////
   let _navigate = useNavigate();
-  const _sidebar = document.getElementById('sidebar');
 
   ////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////
   ////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////DIALOG////
@@ -68,12 +67,11 @@ export default function TopNavigator({
     }
   };
 
-  
-
-  function toggleSidebar(){
-    _sidebar?.classList.toggle('show');
-    console.log('clicked!');
-  } 
+  function toggleSidebar() {
+    const _sidebar = document.getElementById("sidebar");
+    _sidebar?.classList.toggle("show");
+    console.log("clicked!");
+  }
 
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
@@ -96,7 +94,7 @@ export default function TopNavigator({
         style={_style}
       >
         {/* //lOGO// */}
-        < HeaderSideButton _onClick={toggleSidebar}/>
+        <HeaderSideButton _onClick={toggleSidebar} />
         {/* //SEARCH// */}
         {/* //NAV-LINKS// */}
         <TopNavLinks _userContext={globalUser} _invokeModal={_invokeModal} />
@@ -131,10 +129,10 @@ import {
 //   BG_Lettering_grey,
 // } from "../../../../../utility/imports.js";
 //@ts-ignore
-import "./TopNavigator.scss";//@ts-ignore
+import "./TopNavigator.scss"; //@ts-ignore
 import "../../side/Sidebar.scss";
 import { useUserContext } from "../../../../../store/UserContext.tsx";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import FetchData from "../../../../../requests/http.ts"; //@ts-ignore
 import { useNavigate } from "react-router-dom"; //@ts-ignore
 import { showAlert } from "../../../../../utility/imports.js";
@@ -144,6 +142,6 @@ import { useLocalUser } from "../../../../../models/hooks/useLocalUser.tsx";
 import { GeneralLogo } from "../../../../../utility/assetsImport.js";
 import TopNavLinks from "../../links/TopNavLinks.tsx";
 import SessionOutModal from "../../cards/modal/SessionOutModal.tsx";
-import { useLogOut } from "../../../../../models/hooks/useLogOut.tsx";import HeaderSideButton from "../../../header/HeaderSideButton.tsx";
+import { useLogOut } from "../../../../../models/hooks/useLogOut.tsx";
+import HeaderSideButton from "../../../header/HeaderSideButton.tsx";
 import HeaderSideUser from "../../../header/HeaderSideUser.tsx";
-

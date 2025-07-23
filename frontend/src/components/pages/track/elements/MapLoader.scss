@@ -2,12 +2,14 @@
 
 $--local-height: 9rem;
 $--local-height-phone:14rem;
+
 .mapper {
     height: auto;
     width: fit-content;
 }
 
 .leaflet-container {
+    position: sticky;
     max-height: 70rem; //76vh;
     height: 70rem; //76vh;
     width: 60vw; //50vw;
@@ -35,6 +37,7 @@ $--local-height-phone:14rem;
         display: flex;
         align-content: center;
         margin-bottom: 0.5rem;
+
         @include mixins.respond(phone-small){
            height: $--local-height-phone;
         }
@@ -46,11 +49,13 @@ $--local-height-phone:14rem;
         width: 0.5rem;
         border-radius: 6px 0 0 6px;
         filter: brightness(1);
+
         @include mixins.respond(phone-small){
             height: $--local-height-phone;
-    }
+        }
 
     }
+
     &-body {
         height: $--local-height;
         width: 99%;
@@ -58,9 +63,8 @@ $--local-height-phone:14rem;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        
-    
     }
+
     &-desc {
         display: flex;
         flex-direction: column;
@@ -73,13 +77,12 @@ $--local-height-phone:14rem;
             font-weight: 400;
 
         }
+
         &_desc{
             width: 20rem;
             margin-top: 0.3rem;
             font-size: 1.2rem;
-            color: #c8c7c7;
-            
-
+            color: #c8c7c7;   
         }
     }
 

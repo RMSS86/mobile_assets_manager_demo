@@ -34,8 +34,21 @@ export default function TrackPage({
         <div className="track_layout-right">
           <h1 className="track_layout-right__title">Track List</h1>
           <div className="track_layout-right__list">
-            <LocationTile />
-            <LocationTile />
+            <LocationTile
+              _locName={ASSETS_LOCATIONS[0].name}
+              _caths="3"
+              _assets="86"
+            />
+            <LocationTile
+              _locName={ASSETS_LOCATIONS[1].name}
+              _caths="6"
+              _assets="54"
+            />
+            <LocationTile
+              _locName={ASSETS_LOCATIONS[2].name}
+              _caths="4"
+              _assets="72"
+            />
           </div>
         </div>
       </div>
@@ -54,6 +67,7 @@ type _defaultProps = {
   _onCompClick?: () => void;
 };
 
+import { ASSETS_LOCATIONS } from "../../../utility/data/UI-Data/UIData";
 import LocationTile from "./elements/LocationTile";
 import MapLoader from "./elements/MapLoader";
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////

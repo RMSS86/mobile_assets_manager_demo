@@ -31,13 +31,16 @@ const LOCAIION_TILE_ITEMS: _icons[] = [
 ]
 
   var ASSETS_LOCATIONS: location[] = [
-    { id: 1, name: "headquarters", position: [14.579503, -90.495271] },
-    { id: 1, name: "Store #1", position: [14.6262056, -90.5749618] },
+    { id: 1, name: "HeadQuarters ", position: [14.579503, -90.495271] },
+    { id: 2, name: "Store #1 ", position: [14.6262056, -90.5749618] },
+    { id: 3, name: "Store #2 ", position: [14.5727815,-90.5384374] },
   ];
+
   type location = {
     id: number;
     name: string;
     position: PointTuple;
+    assets?: '';
   };
 export { HEADER_DATA, FOOTER_DATA, SUB_HEADER_ITEMS, LOCAIION_TILE_ITEMS ,ASSETS_LOCATIONS };
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////

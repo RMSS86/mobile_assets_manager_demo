@@ -31,7 +31,7 @@
             background-color: #222633ed;
             border-radius: 12px;
             padding: 1.5rem;
-    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+            box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
 
             @include mixins.respond(tab-land){
                 margin-top: 1.8rem;

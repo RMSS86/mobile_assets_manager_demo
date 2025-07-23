@@ -16,6 +16,8 @@ export default function MapLoader({
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
 
+  // var _stats = ASSETS_LOCATIONS.map()
+
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   return (
@@ -37,11 +39,13 @@ export default function MapLoader({
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={ASSETS_LOCATIONS[0].position}>
-            <Popup>
-              Headquarters <br />
-            </Popup>
-          </Marker>
+          {ASSETS_LOCATIONS.map((loc) => (
+            <Marker key={loc.id} position={loc.position}>
+              <Popup>
+                {loc.name} <br />
+              </Popup>
+            </Marker>
+          ))}
         </MapContainer>
       </div>
     </ContextType>

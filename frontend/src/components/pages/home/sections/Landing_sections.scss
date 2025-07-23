@@ -234,7 +234,9 @@
         width: 100%;
         flex-wrap: wrap;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 4rem;
+
     }
 
     &__celds {

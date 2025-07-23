@@ -27,6 +27,7 @@ type _asset = {
     code: string;
     quanity: number;
     url: string;
+    qr?: '';
 }
 
 export {DUMMY_ASSETS, INTERNET_IMAGE_URLS};
