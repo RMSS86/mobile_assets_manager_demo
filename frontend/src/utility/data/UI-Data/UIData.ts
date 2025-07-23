@@ -29,7 +29,17 @@ const LOCAIION_TILE_ITEMS: _icons[] = [
 
 
 ]
-export { HEADER_DATA, FOOTER_DATA, SUB_HEADER_ITEMS, LOCAIION_TILE_ITEMS };
+
+  var ASSETS_LOCATIONS: location[] = [
+    { id: 1, name: "headquarters", position: [14.579503, -90.495271] },
+    { id: 1, name: "Store #1", position: [14.6262056, -90.5749618] },
+  ];
+  type location = {
+    id: number;
+    name: string;
+    position: PointTuple;
+  };
+export { HEADER_DATA, FOOTER_DATA, SUB_HEADER_ITEMS, LOCAIION_TILE_ITEMS ,ASSETS_LOCATIONS };
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////
 type _icons = {
@@ -56,6 +66,7 @@ type _brandings = {
   alt: string;
 };
 
+import { PointTuple } from 'leaflet';
 import {
     Add_circle_icon,     
     delete_icon,

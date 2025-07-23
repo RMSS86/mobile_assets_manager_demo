@@ -15,15 +15,6 @@ export default function MapLoader({
 }: _defaultProps) {
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
   ///////FUNCTIONS//////////FUNCTIONS///////////FUNCTIONS///////////
-  var _locations: location[] = [
-    { id: 1, name: "headquarters", position: [14.579503, -90.495271] },
-    { id: 1, name: "Store #1", position: [14.6262056, -90.5749618] },
-  ];
-  type location = {
-    id: number;
-    name: string;
-    position: PointTuple;
-  };
 
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
   ////////RETURN/////RETURN/////RETURN/////RETURN/////RETURN/////
@@ -38,7 +29,7 @@ export default function MapLoader({
       {children}
       <div className="mapper-block">
         <MapContainer
-          center={_locations[0].position}
+          center={ASSETS_LOCATIONS[0].position}
           zoom={12}
           scrollWheelZoom={false}
         >
@@ -46,7 +37,7 @@ export default function MapLoader({
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={_locations[0].position}>
+          <Marker position={ASSETS_LOCATIONS[0].position}>
             <Popup>
               Headquarters <br />
             </Popup>
@@ -74,3 +65,4 @@ import { PointTuple } from "leaflet";
 //@ts-ignore
 import "./MapLoader.scss";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { ASSETS_LOCATIONS } from "../../../../utility/data/UI-Data/UIData";
