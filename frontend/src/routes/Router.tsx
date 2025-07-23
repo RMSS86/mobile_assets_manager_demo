@@ -10,8 +10,8 @@ export const GlobalRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> }, //, loader: _homeLoader
-      { path: "login", element: <LoginPage />},
-      { path: "qr", element:< QrPage />},
+      { path: "login", element: <LoginPage /> },
+      { path: "qr", element: <QrPage /> },
       //   {
       //     path: "prod",
       //     children: [
@@ -52,10 +52,12 @@ export const GlobalRouterElments = createBrowserRouter(
     <>
       <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
         <Route index={true} element={<HomePage />} />
-        <Route path='assets' element={<ItemsPage />} />
-        <Route path='track' element={<TrackPage />} />
-        <Route path='qr' element={<QrPage />} />
-        <Route path='login' element={<LoginPage />} />
+        <Route path="assets" element={<ItemsPage />} />
+        <Route path="track" element={<TrackPage />} />
+        <Route path="qr" element={<QrPage />} />
+        <Route path="login" element={<LoginPage />} />
+        {/* <Route path="signup" element={<SignupPage />} />
+        <Route path="password-reset" element={<PasswordResetPage />} /> */}
 
         {/* //tours// */}
         {/* //:id// */}
@@ -94,7 +96,6 @@ import LoginPage from "../components/pages/login/LoginPage.js";
 
 import { createRoutesFromElements, Navigate, Outlet } from "react-router";
 
-
 import {
   HomePage,
 
@@ -103,6 +104,8 @@ import {
 import QrPage from "../components/pages/qr/QrPage.js";
 import ItemsPage from "../components/pages/items/ItemsPage.js";
 import TrackPage from "../components/pages/track/TrackPage.js";
+import PasswordResetPage from "../components/pages/password/PasswordResetPage.js";
+import SignupPage from "../components/pages/signin/SignupPage.js";
 
 // import HomePage, { topToursLoader } from "../components/pages/home/Home";
 // import ToursPage, {

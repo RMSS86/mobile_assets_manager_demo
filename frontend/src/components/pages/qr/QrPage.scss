@@ -1,6 +1,79 @@
+@use '../../../sass/libs/mixins';
 
+$--height-general: fit-content;
 
 .qr {
-    height: 86vh;
+    height: $--height-general;
+    width: 100%;
+
+    &_wrapper{
+        height: $--height-general;
+        margin-bottom: 1.2rem;
+        padding: 4.5rem 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.1rem;
+
+        &-left{
+            width: fit-content;
+            &_title{
+                color: #464444;
+                font-size: 4rem;
+                
+            }
+        }
+
+        &-right{
+            display: flex;
+            flex-direction: column;
+            width: 30rem;
+            justify-content: center;
+
+            &_foot {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-left: 1.2rem;
+                margin-top: 1.2rem;
+                gap: 0.6rem;
+                height: fit-content;
+            }
+
+            &_parra{
+                color: #464444;
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    &_model{
+        @include mixins.image_autosize($height:66vh);
+        box-shadow: var(--wp--preset--shadow--natural-simple);
+
+        border-radius: 12px;
+        
+    }
+
+    &_scan{
+        @include mixins.image_autosize($height:51vh);
+        border-radius: 26px;
+        box-shadow: var(--wp--preset--shadow--natural-simple);
+
+
+    }
+
+    &_icon{
+        min-height: 6vh;
+        min-width: 6vh;
+        height: 6vh;
+        width: 6vh;
+        filter: invert(1);
+
+    }
 
 }

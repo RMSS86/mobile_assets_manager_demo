@@ -14,7 +14,6 @@ import Branding_big_two from "/media/branding_two.png";
 import Branding_logo_leters from "/media/logo_and_letters.png"; 
 
 
-
 ////QR SCANCODE
 import QR_Scan_me from "../assets/icons/qr/Brand_gitQr.png";
 
