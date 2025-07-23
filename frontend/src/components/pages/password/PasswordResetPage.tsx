@@ -42,7 +42,7 @@ export default function PasswordResetPage({
         className="reset__page"
         onClick={_onClick}
         style={{
-          backgroundImage: `url(${Branding_logo_leters})`,
+          backgroundImage: `url(${BG_img_one})`,
         }}
       >
         <div className="reset__page-form">
@@ -126,7 +126,7 @@ import FormInput from "../login/elements/InputElement";
 import { useState } from "react"; //@ts-ignore
 import {
   GeneralLogo,
-  Branding_logo_leters, //@ts-ignore
+  BG_img_one, //@ts-ignore
 } from "../../../utility/assetsImport.js";
 import { Login } from "../../../models/types/userType.js";
 import { _email } from "../../../utility/data/data.js";
