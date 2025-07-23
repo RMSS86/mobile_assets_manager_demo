@@ -4,9 +4,9 @@ const ContextType = "section";
 const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function QrPage({
+export default function LandingSectionsPlans({
   children,
-  _className='qr',
+  _className='pricing',
   _id = ContextId,
   _style,
   _onClick,
@@ -26,11 +26,9 @@ export default function QrPage({
       onClick={_onClick}
       style={_style}
     >
-      {children}
-      <div className=''>
-        <div className=''></div>
-        <div className=''></div>
-      </div>
+      {/* {children} */}
+      <PlansCard />
+
     </ContextType>
   );
 }
@@ -46,7 +44,8 @@ type _defaultProps = {
   _onCompClick?: () => void;
 };
 
+import PlansCard from '../../../UI/elements/cards/general/PlansCard';
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './QrPage.scss';
+import './Landing_sections.scss';

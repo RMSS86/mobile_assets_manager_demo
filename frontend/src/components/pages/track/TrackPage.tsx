@@ -6,7 +6,7 @@ const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 export default function TrackPage({
   children,
-  _className,
+  _className = "track",
   _id = ContextId,
   _style,
   _onClick,
@@ -26,8 +26,19 @@ export default function TrackPage({
       onClick={_onClick}
       style={_style}
     >
-      {children}
-      <p>[TRACK_PAGE]</p>
+      {/* {children} */}
+      <div className="track_layout">
+        <div className="track_layout-left">
+          <MapLoader />
+        </div>
+        <div className="track_layout-right">
+          <h1 className="track_layout-right__title">Track List</h1>
+          <div className="track_layout-right__list">
+            <LocationTile />
+            <LocationTile />
+          </div>
+        </div>
+      </div>
     </ContextType>
   );
 }
@@ -43,7 +54,11 @@ type _defaultProps = {
   _onCompClick?: () => void;
 };
 
+import LocationTile from "./elements/LocationTile";
+import MapLoader from "./elements/MapLoader";
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './TrackPage.scss';
+import "./TrackPage.scss";
+
+//map of locations! make two maps one for locations and other for places

@@ -297,7 +297,7 @@
             padding: 3rem 0 1.53rem 0;
             border-radius: 0 0 12px 12px;
             margin-top: -2rem;
-            box-shadow: inset 1px 1px 7px 0px #9a9da6d6;
+            box-shadow:  1px 1px 7px 0px #29292a;
 
 
         }
@@ -345,6 +345,10 @@
 
 }
 
+.pricing {
+        height: auto;
+        padding: 6vh 0;
+}
 
 .order_swap{
     order: 2;

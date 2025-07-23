@@ -29,7 +29,7 @@ export default function ItemsPage({
     {/* SUBHEADER */}
     <SubHeader _logo_tag='e-AM' _page_tag='Manage Assets' _menu={<HeaderFragment />}/>
 
-    {/* PENDING MAPPING FORM DB! */}
+    {/* PENDING MAPPING FORM DB!  AND MAKE COMPONENT! */}
     <div className='products_grid'>
       {DUMMY_ASSETS.map((e)=>(
         <ProductCard _img={e.url} _title={e.cathegory} _desc={e.desc} _code={e.code} _amount={e.quanity.toString()}/>
@@ -39,6 +39,8 @@ export default function ItemsPage({
  
     </div>
 
+    {/* <Assets_section_cathegories /> */}
+    
     {/* TUTORIALS OR REGISTRATION PAGE? xD */}
     <Landing_section_action />
 
@@ -66,4 +68,5 @@ import './ItemsPage.scss'; //@ts-ignore
 import {BG_img_one} from '../../../utility/assetsImport.js';
 import Landing_section_action from '../home/sections/Landing_section_action.js';import HeaderFragment from '../../UI/elements/headers/HeaderFragment.js';
 import { DUMMY_ASSETS } from '../../../utility/data/InternetImages.js';
+import Assets_section_cathegories from './sections/Assets_section_cathegories.js';
 

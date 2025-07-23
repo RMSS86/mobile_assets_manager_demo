@@ -1,12 +1,12 @@
 // import React, { useEffect, useRef, useState } from "react";
 
-const ContextType = "section";
+const ContextType = "div";
 const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function QrPage({
+export default function PlansCard({
   children,
-  _className='qr',
+  _className='plans_card',
   _id = ContextId,
   _style,
   _onClick,
@@ -26,11 +26,19 @@ export default function QrPage({
       onClick={_onClick}
       style={_style}
     >
-      {children}
-      <div className=''>
-        <div className=''></div>
-        <div className=''></div>
+    
+      {/* {children} */}
+ 
+        <div className='plans_card-body'>
+        <div className='plans_card-header'></div>    
+        <div className='plans_card-descriptions'></div>    
+        <div className='plans_card-features'></div>    
+        <a className='plans_card-button'></a>
+
+     
+
       </div>
+
     </ContextType>
   );
 }
@@ -49,4 +57,4 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './QrPage.scss';
+import './PlansCard.scss';

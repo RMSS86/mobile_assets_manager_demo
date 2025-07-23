@@ -18,7 +18,7 @@ export default function Landing_section_action({
         <div className="actions__celd" >  
           <div className="actions__celds "> 
             <img alt="branding" src={Branding_logo_leters} className="actions-brand_img"/>
-            <h3 className="actions-text_white actions-text_lower actions-text_underpara"> Chek out our plans Now </h3>
+            <h3 className="actions-text_white actions-text_lower actions-text_underpara"> Chek out our plans Now! </h3>
 
              </div>
             

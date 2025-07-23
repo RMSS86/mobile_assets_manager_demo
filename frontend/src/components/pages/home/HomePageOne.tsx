@@ -28,6 +28,7 @@ export default function HomePage({
       <Landing_section_opener />
       <Landing_section_brand /> 
       <Landing_section_product />
+      {/* <LandingSectionsPlans /> */}
       <Landing_section_action />
 
       </_contextType>
@@ -78,4 +79,5 @@ import Landing_section_brand from "./sections/Landing_Section_Brand.js";
 import Landing_section_product from "./sections/Landing_section_product.js";
 import Landing_section_action from "./sections/Landing_section_action.js";
 import Landing_section_opener from "./sections/Landing_section_opener.js";
+import LandingSectionsPlans from "./sections/Landing_section_plans.js";
 

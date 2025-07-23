@@ -234,3 +234,17 @@
     width: 100%;
     max-height: $height;
 }
+
+/// TAKES AN IMAGE AND PRESERVES RATIO WHILE SCALING HEIGH.
+/// @param {vh} $height SVG data URL.
+@mixin image_autofit(
+  $height:50vh,
+  $width:100%,
+  $border_rad:6px,
+  ){
+    border-radius: $border_rad;
+    width: $width;
+    object-fit: cover;
+    max-height: $height;
+    min-height: $height;
+}

@@ -9,7 +9,7 @@
     position: sticky;
     font-size: 1.8rem;
     box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
-        transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
         
     @include mixins.respond(phone-large){
         border-radius: 12px 3px 3px 12px;

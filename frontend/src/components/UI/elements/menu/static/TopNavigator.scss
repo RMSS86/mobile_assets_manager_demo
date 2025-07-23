@@ -4,15 +4,16 @@
 
 .top-nav {
   @include layout-elements.top_nav();
-  margin-top: 0.9rem;
+  margin: 0.9rem 0.9rem 0.9rem 0;
+
 
       //> CHANGE ARRAGE POSITION OF ELEMENTS
       @include mixins.respond(phone-large){
-        margin-top: 0;
+          margin: 0 .9rem;
         
     }
       @include mixins.respond(phone){
-        margin-top: 1.2rem;
+        margin: 1.2rem .9rem .9rem 0;
         
     }
 }

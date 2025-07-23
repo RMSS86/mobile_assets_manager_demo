@@ -22,7 +22,14 @@ const SUB_HEADER_ITEMS: _icons[] = [
   { icon: Qr_scan_icon },
 
 ]
-export { HEADER_DATA, FOOTER_DATA, SUB_HEADER_ITEMS };
+const LOCAIION_TILE_ITEMS: _icons[] = [
+  { icon: Add_circle_icon },
+  { icon: Qr_scan_icon },
+  { icon: delete_icon },
+
+
+]
+export { HEADER_DATA, FOOTER_DATA, SUB_HEADER_ITEMS, LOCAIION_TILE_ITEMS };
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////
 /////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES/////TYPES////
 type _icons = {

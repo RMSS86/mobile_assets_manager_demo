@@ -1,0 +1,132 @@
+@use '../../../../sass/libs/mixins';
+
+$--local-height: 9rem;
+$--local-height-phone:14rem;
+.mapper {
+    height: auto;
+    width: fit-content;
+}
+
+.leaflet-container {
+    max-height: 70rem; //76vh;
+    height: 70rem; //76vh;
+    width: 60vw; //50vw;
+    margin-left: 2.1rem;
+    border-radius: 18px;
+    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+
+    @include mixins.respond(tab-land){
+        height: 54vh;
+        width: 92vw;
+        margin-left: 0;
+    }
+
+    &_pop {
+        font-size: 1.2rem !important;
+    }
+}
+
+.location {
+    &_tile {
+        height: $--local-height;
+        width: auto;
+        background-color: #89898951;
+        border-radius: 6px;
+        display: flex;
+        align-content: center;
+        margin-bottom: 0.5rem;
+        @include mixins.respond(phone-small){
+           height: $--local-height-phone;
+        }
+
+
+    &-start {
+        height: $--local-height;
+        background-color: #70fff3cd;
+        width: 0.5rem;
+        border-radius: 6px 0 0 6px;
+        filter: brightness(1);
+        @include mixins.respond(phone-small){
+            height: $--local-height-phone;
+    }
+
+    }
+    &-body {
+        height: $--local-height;
+        width: 99%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    
+    }
+    &-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1rem;
+
+        &_title {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: 400;
+
+        }
+        &_desc{
+            width: 20rem;
+            margin-top: 0.3rem;
+            font-size: 1.2rem;
+            color: #c8c7c7;
+            
+
+        }
+    }
+
+    &-metrics {
+        margin-left: .24rem;
+        padding: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+    
+    &-actions {
+        display: flex;
+        align-items: center;
+        margin-left: 0.9rem;
+        gap: 1rem;
+        &__wrapper {
+
+        }
+
+        &__icon {
+            transition: all 1s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    }
+    &_aux {
+        &-center{
+            height: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+.tile_count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-tag{
+        font-size: 1.2rem;
+        color: #fff;
+    }
+}

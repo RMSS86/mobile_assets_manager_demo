@@ -128,7 +128,7 @@ export default function LoginPage({
             </form>
 
 
-            {/* IMAGE COMPLEMENT  */}
+            {/* IMAGE COMPONENT  */}
             <div className="login__page-post">
               <div className="login__page-post_sec">
                 <img

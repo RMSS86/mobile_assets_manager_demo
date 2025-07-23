@@ -1,0 +1,67 @@
+@use '../../../sass/libs/mixins';
+
+.track{
+    
+    height: fit-content;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    &_layout{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: fit-content;
+
+        width: 98vw;
+        height: fit-content;
+        margin-top: 3.9rem;
+        margin-bottom: 2.1rem;
+
+        &-left{
+            max-width: fit-content;
+
+        }
+        
+        &-right{
+            width: 54rem;
+            min-height: 14rem;
+            height: auto;
+            margin-left: 3rem;
+            background-color: #222633ed;
+            border-radius: 12px;
+            padding: 1.5rem;
+    box-shadow: 1px 1px 4px rgba(34, 38, 51, 0.8392156863);
+
+            @include mixins.respond(tab-land){
+                margin-top: 1.8rem;
+                margin-left: 0;
+
+                width: 90%;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            @include mixins.respond(phone-large){
+                margin-top: 1.8rem;
+                margin-left: 0;
+                width: 95vw;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            &__title{
+                color: #fff3ff;
+                font-size: 2.4rem;
+                font-weight: 400;
+            }
+
+            &__list{
+
+            }
+
+        }
+    }
+
+}
+
+
+//track

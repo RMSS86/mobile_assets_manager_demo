@@ -4,9 +4,9 @@ const ContextType = "section";
 const ContextId = "";
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
 /////COMPONENET/////COMPONENET/////COMPONENET/////COMPONENET/////
-export default function QrPage({
+export default function Assets_section_cathegories({
   children,
-  _className='qr',
+  _className='pricing',
   _id = ContextId,
   _style,
   _onClick,
@@ -26,11 +26,9 @@ export default function QrPage({
       onClick={_onClick}
       style={_style}
     >
-      {children}
-      <div className=''>
-        <div className=''></div>
-        <div className=''></div>
-      </div>
+      {/* {children} */}
+
+        [helllllo!!]
     </ContextType>
   );
 }
@@ -49,4 +47,4 @@ type _defaultProps = {
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //////////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS//////IMPORTS/////////
 //@ts-ignore
-import './QrPage.scss';
+import './Assets_sections.scss';
