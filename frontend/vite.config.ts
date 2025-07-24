@@ -10,7 +10,7 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
-    //origin: "http://0.0.0.0:8080",
+    origin: "http://localhost:3000",
   },
   css: {
     preprocessorOptions: {
